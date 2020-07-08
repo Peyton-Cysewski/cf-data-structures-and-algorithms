@@ -1,6 +1,6 @@
-# Daily Code Challenge README Example
+# Daily Code Challenge 01
 
-## ShiftArray
+## ArrayShift
 *Author: Peyton Cysewski*
 
 ---
@@ -33,7 +33,7 @@ Given an integer array and an integer, the integer will be inserted into the cen
 
 
 ### Whiteboard Visual
-![Image 1](../../assets/ShiftArray.png)
+![Image 1](../../assets/ArrayShift.png)
 
 
 ---
