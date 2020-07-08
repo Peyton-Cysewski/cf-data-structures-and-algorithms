@@ -11,11 +11,11 @@ namespace ArrayShift
         }
 
         /// <summary>
-        /// 
+        /// Takes in an integer array and an integer and inserts the integer at either the midpoint or one index after the midpoint of the array
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="num"></param>
-        /// <returns></returns>
+        /// <param name="array">array to have integer added to</param>
+        /// <param name="num">integer that is added to the array/param>
+        /// <returns>array with the input integer inserted into the middle</returns>
         public static int[] insertShiftArray(int[] array, int num)
         {
             int[] newArray = new int[array.Length + 1];
