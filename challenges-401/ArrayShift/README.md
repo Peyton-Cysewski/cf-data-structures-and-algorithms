@@ -1,4 +1,4 @@
-# Daily Code Challenge 01
+# Code Challenge 01
 
 ## ArrayShift
 *Author: Peyton Cysewski*
