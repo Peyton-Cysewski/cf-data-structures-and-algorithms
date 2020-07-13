@@ -22,9 +22,9 @@ This challenged was done as a class so the approach was simply to get it done. O
 
 ### API
 
-```Insert()``` - Adds a new node to the front of the list (replacing and becoming the new ```Head```).
-```Includes()``` - Looks through the list for a value and returns a boolean.
-```ToString()``` - Overrides the native method and returns a list of the values, in order, with a '->' separating each value.
+- ```Insert()``` - Adds a new node to the front of the list (replacing and becoming the new ```Head```).
+- ```Includes()``` - Looks through the list for a value and returns a boolean.
+- ```ToString()``` - Overrides the native method and returns a list of the values, in order, with a '->' separating each value.
 
 
 ---
