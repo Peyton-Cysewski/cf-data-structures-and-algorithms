@@ -6,3 +6,4 @@ This repo is filled with code challenges from the 301 and 401 course levels that
 
 401 Content
 - [ArrayShift](./challenges-401/ArrayShift)
+- [LinkedList](./challenges-401/LinkedList)
