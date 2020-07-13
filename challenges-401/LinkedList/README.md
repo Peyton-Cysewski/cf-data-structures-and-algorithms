@@ -11,6 +11,25 @@ Implement a singly-linked linked list and have its implementation stored in a li
 
 ---
 
+
+### Approach & Efficiency
+
+This challenged was done as a class so the approach was simply to get it done. Our instructor primarily guided us along as we filled in the blanks. The goal was simply to make it work. SIngly linked lists have a few characteristics such as having a value and then a reference to the next node in the list, so that is what we implemented.
+
+
+---
+
+
+### API
+
+```Insert()``` - Adds a new node to the front of the list (replacing and becoming the new ```Head```).
+```Includes()``` - Looks through the list for a value and returns a boolean.
+```ToString()``` - Overrides the native method and returns a list of the values, in order, with a '->' separating each value.
+
+
+---
+
+
 ### Inputs and Expected Outputs
 
 | Input Code | Console Output |
@@ -24,8 +43,8 @@ Implement a singly-linked linked list and have its implementation stored in a li
 
 ---
 
-### Big O for Looking Through a Linked List
 
+### Big O for Looking Through a Linked List
 
 | Time | Space |
 | :----------- | :----------- |
