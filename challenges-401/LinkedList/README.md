@@ -1,6 +1,6 @@
 # Code Challenge 05
 
-## ArrayShift
+## LinkedList
 *Author: Peyton Cysewski*
 
 ---
@@ -36,10 +36,10 @@ Implement a singly-linked linked list and have its implementation stored in a li
 
 
 ### Implementation Visual
-Code to add to the linked list:
+##### Code to add to the linked list:
 ![Input Code](./assets/LinkedListCode.png)
 
-Console Output Demonstrated:
+##### Console Output Demonstrated:
 ![Console Output](./assets/LinkedListOutput.png)
 
 
