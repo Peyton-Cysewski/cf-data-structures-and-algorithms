@@ -1,4 +1,4 @@
-# Code Challenge 05
+# Code Challenge 05 + 06 + 07
 
 ## LinkedList
 *Author: Peyton Cysewski*
@@ -52,7 +52,7 @@ For ```ToString()```
 | Input Code | Console Output |
 | :----------- | :----------- |
 | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | <- Pre-existing Linked List |
-| ```list.ToString();``` | To Console: 1 -> 2 -> 3 -> 4 -> 5 -> NULL |
+| ```list.ToString();``` | To Console: ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
 
 For ```Includes()```
 | Input | Args | Output |
@@ -95,7 +95,7 @@ For ```kthFromEnd()```
 
 | Time | Space |
 | :----------- | :----------- |
-| O(n) | O(n) |
+| O(n) | O(1) |
 
 
 ---
