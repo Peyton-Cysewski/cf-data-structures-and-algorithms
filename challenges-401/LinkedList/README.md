@@ -16,7 +16,7 @@ Implement a singly-linked linked list and have its implementation stored in a li
 
 This challenged was done as a class so the approach was simply to get it done. Our instructor primarily guided us along as we filled in the blanks. The goal was simply to make it work. Singly linked lists have a few characteristics such as having a value and then a reference to the next node in the list, so that is what we implemented.
 
-The next part was adding a few more methods. These include adding nodes to the end of the array or into the middle of the array either before or after a desired value.
+The next part was adding a few more methods. These include adding nodes to the end of the array or into the middle of the array either before or after a desired value. The approaches were all very similar and involved iterating through lists of unknown length using a while loop. Once a certain value is detected then the methods will perform their specific variation on inserting a new node into the list.
 
 
 ---
@@ -28,6 +28,8 @@ The next part was adding a few more methods. These include adding nodes to the e
 - ```Includes()``` - Looks through the list for a value and returns a boolean.
 - ```ToString()``` - Overrides the native method and returns a list of the values, in order, with a '->' separating each value.
 - ```Append()``` - Adds a new node to the end of the linked list.
+- ```InsertBefore()``` - Searches for a desired value and inserts a new node directly in front of the node with the desired value.
+- ```InsertAfter()``` - Searches for a desired value and inserts a new node directly after the node with the desired value.
 
 
 ---
@@ -53,16 +55,17 @@ For ```Append()```
 For ```InsertBefore()```
 | Input | Args | Output |
 | :---- | :---- | :---- |
-| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
-| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```3, 10``` | ```1 -> 2 -> 10 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```1, 10``` | ```10 -> 1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
 | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```0``` | ```Exception``` |
 
 For ```InsertAfter()```
 | Input | Args | Output |
 | :---- | :---- | :---- |
-| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
-| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```3, 10``` | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```5, 10``` | ```1 -> 2 -> 3 -> 4 -> 5 -> 10 -> NULL``` |
 | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```6``` | ```Exception``` |
+
 
 ---
 
@@ -93,6 +96,6 @@ For ```InsertAfter()```
 
 ### Change Log
 1.1: *Initial Release* - 12 July 2020
-1.2: *Added Append(), InsertBefore(), and InsertAfter()* - 13 July 2020
+1.2: *Added Append(), InsertBefore(), and InsertAfter() methods* - 13 July 2020
 
 ---
