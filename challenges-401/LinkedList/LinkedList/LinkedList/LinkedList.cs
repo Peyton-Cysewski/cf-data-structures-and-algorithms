@@ -77,5 +77,67 @@ namespace LinkedListLibrary
 
             return sb.ToString();
         }
+
+        /// <summary>
+        /// Appends a new node to the end of a linked list
+        /// </summary>
+        /// <param name="value">the value of the new node</param>
+        public void Append(int value)
+        {
+            Current = Head;
+            Node newNode = new Node(value);
+            newNode.Next = null;
+            Node last = Current;
+            while (Current != null)
+            {
+                last = Current;
+                Current = Current.Next;
+            }
+            last.Next = newNode;
+        }
+
+        /// <summary>
+        /// Creates a node and inserts it directly before the desired value. If no value is found an exception is thrown.
+        /// </summary>
+        /// <param name="search">the value to insert the new node in front of</param>
+        /// <param name="value">the value of the new node</param>
+        public void InsertBefore(int search, int value)
+        {
+            Current = Head;
+            Node newNode = new Node(value);
+            Node last = Current;
+            int counter = 0;
+            while (Current.Value != search && Current != null)
+            {
+                last = Current;
+                Current = Current.Next;
+                counter++;
+            }
+            newNode.Next = Current;
+            if (counter == 0)
+            {
+                Head = newNode;
+            }
+            else
+            {
+                last.Next = newNode;
+            }
+        }
+
+        public void InsertAfter(int search, int value)
+        {
+            Current = Head;
+            Node newNode = new Node(value);
+            Node last = Current;
+            int counter = 0;
+            while (Current.Value != search && Current != null)
+            {
+                last = Current;
+                Current = Current.Next;
+                counter++;
+            }
+            newNode.Next = Current.Next;
+            Current.Next = newNode;
+        }
     }
 }

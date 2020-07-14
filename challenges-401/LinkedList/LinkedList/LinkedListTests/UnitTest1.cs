@@ -103,4 +103,48 @@ namespace LinkedListTests
 
         }
     }
+
+    public class UnitTestPart2
+    {
+        [Fact]
+        public void AppendWorks()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            // Act
+            list.Append(10);
+            string actual = list.ToString();
+            string expected = "42 -> 23 -> 16 -> 15 -> 8 -> 4 -> 10 -> NULL";
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void AppendWorksWithMultipleNodes()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            // Act
+            list.Append(10);
+            list.Append(11);
+            list.Append(12);
+            string actual = list.ToString();
+            string expected = "42 -> 23 -> 16 -> 15 -> 8 -> 4 -> 10 -> 11 -> 12 -> NULL";
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+    }
 }
