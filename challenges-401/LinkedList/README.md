@@ -32,6 +32,7 @@ This challenged was done as a class so the approach was simply to get it done. O
 
 ### Inputs and Expected Outputs
 
+For ```Insert()```
 | Input Code | Console Output |
 | :----------- | :----------- |
 | ```list.Insert(4);``` | N/A |
@@ -54,17 +55,22 @@ This challenged was done as a class so the approach was simply to get it done. O
 ---
 
 
-### Implementation Visual
+### Visuals
+
+#### Insert Method
 ##### Code to add to the linked list:
 ![Input Code](./assets/LinkedListCode.png)
-
 ##### Console Output Demonstrated:
 ![Console Output](./assets/LinkedListOutput.png)
 
+#### Append Method
+##### Whiteboard
+![Append](./assets/AppendWhiteboard.png)
 
 ---
 
 ### Change Log
-1.1: *Initial Release* - 12 July 2020  
+1.1: *Initial Release* - 12 July 2020
+1.2: *Added Append(), InsertBefore(), and InsertAfter()* - 13 July 2020
 
 ---
