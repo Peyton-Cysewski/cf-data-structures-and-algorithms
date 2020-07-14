@@ -14,7 +14,9 @@ Implement a singly-linked linked list and have its implementation stored in a li
 
 ### Approach & Efficiency
 
-This challenged was done as a class so the approach was simply to get it done. Our instructor primarily guided us along as we filled in the blanks. The goal was simply to make it work. SIngly linked lists have a few characteristics such as having a value and then a reference to the next node in the list, so that is what we implemented.
+This challenged was done as a class so the approach was simply to get it done. Our instructor primarily guided us along as we filled in the blanks. The goal was simply to make it work. Singly linked lists have a few characteristics such as having a value and then a reference to the next node in the list, so that is what we implemented.
+
+The next part was adding a few more methods. These include adding nodes to the end of the array or into the middle of the array either before or after a desired value.
 
 
 ---
@@ -25,6 +27,7 @@ This challenged was done as a class so the approach was simply to get it done. O
 - ```Insert()``` - Adds a new node to the front of the list (replacing and becoming the new ```Head```).
 - ```Includes()``` - Looks through the list for a value and returns a boolean.
 - ```ToString()``` - Overrides the native method and returns a list of the values, in order, with a '->' separating each value.
+- ```Append()``` - Adds a new node to the end of the linked list.
 
 
 ---
@@ -41,6 +44,25 @@ For ```Insert()```
 | ```list.Insert(1);``` | N/A |
 | ```list.ToString();``` | 1 -> 2 -> 3 -> 4 -> NULL |
 
+For ```Append()```
+| Input | Args | Output |
+| :---- | :---- | :---- |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```10``` | ```1 -> 2 -> 3 -> 4 -> 5 -> 10 -> NULL``` |
+| ```1 -> NULL``` | ```5``` | ```1 -> 5 -> NULL``` |
+
+For ```InsertBefore()```
+| Input | Args | Output |
+| :---- | :---- | :---- |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```0``` | ```Exception``` |
+
+For ```InsertAfter()```
+| Input | Args | Output |
+| :---- | :---- | :---- |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |  | ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` |
+| ```1 -> 2 -> 3 -> 4 -> 5 -> NULL``` | ```6``` | ```Exception``` |
 
 ---
 
