@@ -139,5 +139,31 @@ namespace LinkedListLibrary
             newNode.Next = Current.Next;
             Current.Next = newNode;
         }
+
+        public int kthFromEnd(int k)
+        {
+            Current = Head;
+            int counter = 0;
+            while (Current != null)
+            {
+                Current = Current.Next;
+                counter++;
+            }
+            int numFromStart = 0;
+            if (k < 0 && Math.Abs(k) < counter + 1)
+                numFromStart = Math.Abs(k);
+            else if (k >= 0 && k < counter)
+                numFromStart = counter - k;
+            else
+                throw new Exception("Reference is out of bounds of the length of the list.");
+            Current = Head;
+            counter = 1;
+            while (counter < numFromStart)
+            {
+                Current = Current.Next;
+                counter++;
+            }
+            return Current.Value;
+        }
     }
 }
