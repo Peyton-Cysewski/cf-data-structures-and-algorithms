@@ -147,4 +147,89 @@ namespace LinkedListTests
         }
 
     }
+
+    public class UnitTestPart3
+    {
+        [Fact]
+        public void kthFromEndWorks()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            //Act
+            int actual = list.kthFromEnd(2);
+            int expected = 3;
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void kthFromEndWorksWithListOfLengthOne()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(1);
+            //Act
+            int actual = list.kthFromEnd(0);
+            int expected = 1;
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void kthFromEndWorksWhenKIsTheLengthOfTheListZeroBased()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            //Act
+            int actual = list.kthFromEnd(4);
+            int expected = 1;
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void kthFromEndWorksWhenKIsLessThanZeroByWrapping()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            //Act
+            int actual = list.kthFromEnd(-4);
+            int expected = 4;
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void kthFromEndThrowsExceptionWhenKIsGreaterThanTheLengthOfTheListZeroBased()
+        {
+            // Assign
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            //Act
+            var ex = Assert.Throws<Exception>(() => list.kthFromEnd(5));
+            string actual = "Reference is out of bounds of the length of the list.";
+            string expected = ex.Message;
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+    }
 }
