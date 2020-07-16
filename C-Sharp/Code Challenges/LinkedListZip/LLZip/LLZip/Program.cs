@@ -8,6 +8,7 @@ namespace LLZip
     {
         public static void Main(string[] args)
         {
+            // Demonstrates the solution in the console
             LinkedList list1 = new LinkedList();
             LinkedList list2 = new LinkedList();
             LinkedList list3 = new LinkedList();
@@ -23,25 +24,32 @@ namespace LLZip
             Console.WriteLine(list3.ToString());
         }
 
+        /// <summary>
+        /// Takes in two linked lists and returns the head node of the two lists zipped together. The first node is always the first node from list 1.
+        /// </summary>
+        /// <param name="list1">List 1</param>
+        /// <param name="list2">List 2</param>
+        /// <returns>Zipped List</returns>
         public static Node zipLists(LinkedList list1, LinkedList list2)
         {
             Node newHead = (list1.Head != null) ? list1.Head : list2.Head;
-            Node current1 = list1.Head;
-            Node current2 = list2.Head;
-            Node temp1 = current1.Next;
-            Node temp2 = current2.Next;
-            //bool break1 = false;
-            //bool break2 = false;
-            while (current1 != null && current2 != null)
+            if (list1.Head != null && list2.Head != null)
             {
-                current1.Next = current2;
-                current2.Next = temp1;
-                current1 = temp1;
-                current2 = temp2;
-                if (temp1 == null) break;
-                temp1 = temp1.Next;
-                if (temp2 == null) break;
-                temp2 = temp2.Next;
+                Node current1 = list1.Head;
+                Node current2 = list2.Head;
+                Node temp1 = current1.Next;
+                Node temp2 = current2.Next;
+                while (current1 != null && current2 != null)
+                {
+                    current1.Next = current2;
+                    if (temp1 == null && temp2 != null) break;
+                    current2.Next = temp1;
+                    if (temp2 == null) break;
+                    current1 = temp1;
+                    current2 = temp2;
+                    temp1 = temp1.Next;
+                    temp2 = temp2.Next;
+                }
             }
             return newHead;
         }
