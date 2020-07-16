@@ -4,6 +4,6 @@ This repo is filled with code challenges from the 301 and 401 course levels that
 
 ## Table of Contents
 
-401 Content
+C# Content
 - [ArrayShift](./challenges-401/ArrayShift)
 - [LinkedList](./challenges-401/LinkedList)
