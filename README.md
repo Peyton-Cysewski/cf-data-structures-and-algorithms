@@ -5,8 +5,8 @@ This repo is meant to both document and showcase all of the the various code cha
 ## Table of Contents
 
  ### C#
-- [Code Challenges](./C-Sharp/"Code Challenges")
-- [Data Structures and Algorithms](./C-Sharp/"Data Structures and Algorithms")
+- [Code Challenges](./C-Sharp/"Code Challenges"/)
+- [Data Structures and Algorithms](./C-Sharp/"Data Structures and Algorithms"/)
 
 ### Javascript
- - [Code Challenges](./JavaScript/"Code Challenges")
+ - [Code Challenges](./JavaScript/"Code Challenges"/)
