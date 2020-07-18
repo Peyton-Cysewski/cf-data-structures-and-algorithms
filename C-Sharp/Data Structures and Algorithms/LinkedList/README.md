@@ -124,5 +124,6 @@ For ```kthFromEnd()```
 - 1.1: *Initial Release* - 12 July 2020
 - 1.2: *Added Append(), InsertBefore(), and InsertAfter() methods* - 13 July 2020
 - 1.3: *Added kthFromEnd() method* - 14 July 2020
+- 1.4: *Added test and function comments* - 18 July 2020
 
 ---

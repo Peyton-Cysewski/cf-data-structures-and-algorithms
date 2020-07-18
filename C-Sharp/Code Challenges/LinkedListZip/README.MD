@@ -48,6 +48,6 @@ Knowing that the lists had to alternate referencing one and then the other, it b
 ---
 
 ### Change Log
-1.1: *Initial Release* - 7 July 2020  
+1.1: *Initial Release* - 16 July 2020  
 
 ---
