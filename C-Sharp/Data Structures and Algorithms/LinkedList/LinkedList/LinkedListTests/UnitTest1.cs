@@ -100,7 +100,78 @@ namespace LinkedListTests
             string expected = "42 -> 23 -> 16 -> 15 -> 8 -> 4 -> NULL";
             // Assert
             Assert.Equal(expected, value);
+        }
 
+        [Fact]
+        public void InsertBeforeWorks()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            // Act
+            list.InsertBefore(3, 10);
+            string actual = list.ToString();
+            string expected = "1 -> 2 -> 10 -> 3 -> 4 -> 5 -> NULL";
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void InsertAfterWorks()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            // Act
+            list.InsertAfter(3, 10);
+            string actual = list.ToString();
+            string expected = "1 -> 2 -> 3 -> 10 -> 4 -> 5 -> NULL";
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void InsertBeforeWorksAtTheFirstNode()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            // Act
+            list.InsertBefore(1, 10);
+            string actual = list.ToString();
+            string expected = "10 -> 1 -> 2 -> 3 -> 4 -> 5 -> NULL";
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void InsertAfterWorksAfterTheLastNode()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(5);
+            list.Insert(4);
+            list.Insert(3);
+            list.Insert(2);
+            list.Insert(1);
+            // Act
+            list.InsertAfter(5, 10);
+            string actual = list.ToString();
+            string expected = "1 -> 2 -> 3 -> 4 -> 5 -> 10 -> NULL";
+            // Assert
+            Assert.Equal(expected, actual);
         }
     }
 

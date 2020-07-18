@@ -124,6 +124,12 @@ namespace LinkedListLibrary
             }
         }
 
+
+        /// <summary>
+        /// Creates a node and inserts it directly after the desired value. If no value is found an exception is thrown.
+        /// </summary>
+        /// <param name="search">The value to insert the new node after</param>
+        /// <param name="value">The value of the new node</param>
         public void InsertAfter(int search, int value)
         {
             Current = Head;
@@ -140,6 +146,11 @@ namespace LinkedListLibrary
             Current.Next = newNode;
         }
 
+        /// <summary>
+        /// Takes a value k and returns the value of the node that is k number nodes from the end. Argument is zero based.
+        /// </summary>
+        /// <param name="k">Targeted index of the node counting backwards from zero from the end of the list</param>
+        /// <returns>Value of targeted node</returns>
         public int kthFromEnd(int k)
         {
             Current = Head;
