@@ -30,7 +30,7 @@ namespace StacksAndQueuesTests
             queue.Enqueue(9);
             int expectedFront = 4;
             int actualFront = queue.Front.Value;
-            int expectedRear = 4;
+            int expectedRear = 9;
             int actualRear = queue.Rear.Value;
             // Assert
             Assert.Equal(expectedFront, actualFront);
@@ -84,10 +84,25 @@ namespace StacksAndQueuesTests
             // Assign
             Queue queue = new Queue();
             // Act
+            // Assert
+            Assert.Throws<NullReferenceException>(() => queue.Peek());
+        }
+
+        [Fact]
+        public void CanSuccessfullyEmptyAQueueAfterMultipleDequeues()
+        {
+            // Assign
+            Queue queue = new Queue();
+            // Act
+            queue.Enqueue(4);
+            queue.Enqueue(6);
+            queue.Enqueue(8);
+            queue.Dequeue();
+            queue.Dequeue();
+            queue.Dequeue();
             bool result = queue.IsEmpty();
             // Assert
             Assert.True(result);
         }
-
     }
 }

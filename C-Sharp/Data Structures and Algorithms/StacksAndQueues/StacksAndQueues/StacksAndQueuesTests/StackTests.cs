@@ -7,6 +7,16 @@ namespace StacksAndQueuesTests
     public class StackTests
     {
         [Fact]
+        public void CanInstantiateEmptyStack()
+        {
+            // Assign
+            Stack stack = new Stack();
+            // Act
+            // Assert
+            Assert.Throws<NullReferenceException>(() => stack.Top.Value);
+        }
+
+        [Fact]
         public void PushWorks()
         {
             // Assign
@@ -111,6 +121,38 @@ namespace StacksAndQueuesTests
             int actual = stack.Peek();
             // Assert
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void PeekThrowsWxceptionWithAnEmptyStack()
+        {
+            // Assign
+            Stack stack = new Stack();
+            // Act
+            // Assert
+            Assert.Throws<NullReferenceException>(() => stack.Peek());
+        }
+        [Fact]
+        public void IsEmptyWorksWithEmptyStack()
+        {
+            // Assign
+            Stack stack = new Stack();
+            // Act
+            bool result = stack.IsEmpty();
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void IsEmptyWorksWithFilledStack()
+        {
+            // Assign
+            Stack stack = new Stack();
+            // Act
+            stack.Push(1);
+            bool result = stack.IsEmpty();
+            // Assert
+            Assert.False(result);
         }
     }
 }
