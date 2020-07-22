@@ -11,6 +11,7 @@ Create and animal shelter (primarily for cats and dogs) that operates with a FIF
 
 ### Inputs and Expected Outputs
 
+#### Enqueue
 | Input | Expected Output |
 | :----------- | :----------- |
 | [1,3,2] | Yes |
