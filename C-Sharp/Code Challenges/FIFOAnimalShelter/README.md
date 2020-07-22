@@ -1,6 +1,6 @@
 # FIFO Animal Shelter
 
-*Author: Fix-It Felix*
+*Author: Peyton Cysewski*
 
 ---
 
@@ -12,29 +12,29 @@ Create and animal shelter (primarily for cats and dogs) that operates with a FIF
 ### Inputs and Expected Outputs
 
 #### Enqueue
-| Input | Expected Output |
-| :----------- | :----------- |
-| [1,3,2] | Yes |
-| [2,99,100] | No |
+| Initial State | Input | Expected Output |
+| :----------- | :----------- | :--------- |
+| `Null` | `Dog` | `Dog` |
+| `Dog -> Dog -> Dog` | `Cat` | `Cat -> Dog -> Dog -> Dog` |
 
+#### Dequeue
+| Initial State | Input | Expected Output |
+| :----------- | :----------- | :--------- |
+| `Cat -> Dog -> Dog -> Dog` | `"Dog"` | `Dog` |
+| `Cat -> Dog -> Dog -> Dog` | `"Bird"` | `Null` |
 
 ---
 
 ### Big O
 
-
 | Time | Space |
 | :----------- | :----------- |
-| O(n) | O(n) |
-
+| O(1) | O(1) |
 
 ---
 
-
 ### Whiteboard Visual
-***[Your Whiteboard Image]***
-![Image 1](https://via.placeholder.com/750x500)
-
+![Whiteboard Solution](./assets/whiteboard.png)
 
 ---
 
