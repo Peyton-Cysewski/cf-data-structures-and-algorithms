@@ -10,7 +10,7 @@ namespace StacksAndQueuesTests
         public void CanInstantiateEmptyStack()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             // Assert
             Assert.Throws<NullReferenceException>(() => stack.Top.Value);
@@ -20,7 +20,7 @@ namespace StacksAndQueuesTests
         public void PushWorks()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(5);
             int expected = 5;
@@ -33,7 +33,7 @@ namespace StacksAndQueuesTests
         public void CanPushMultipleItemsToAStack()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(5);
             stack.Push(6);
@@ -48,7 +48,7 @@ namespace StacksAndQueuesTests
         public void PopReturnCorrectValue()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(9);
             stack.Push(4);
@@ -63,7 +63,7 @@ namespace StacksAndQueuesTests
         public void TopIsCorrectAfterPop()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(9);
             stack.Push(4);
@@ -79,7 +79,7 @@ namespace StacksAndQueuesTests
         public void CanDoMultiplePops()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(9);
             stack.Push(4);
@@ -96,7 +96,7 @@ namespace StacksAndQueuesTests
         public void PopThrowsExceptionOnEmptyStack()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(9);
             stack.Push(4);
@@ -112,7 +112,7 @@ namespace StacksAndQueuesTests
         public void PeekWorks()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(7);
             stack.Push(98);
@@ -127,7 +127,7 @@ namespace StacksAndQueuesTests
         public void PeekThrowsWxceptionWithAnEmptyStack()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             // Assert
             Assert.Throws<NullReferenceException>(() => stack.Peek());
@@ -136,7 +136,7 @@ namespace StacksAndQueuesTests
         public void IsEmptyWorksWithEmptyStack()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             bool result = stack.IsEmpty();
             // Assert
@@ -147,7 +147,7 @@ namespace StacksAndQueuesTests
         public void IsEmptyWorksWithFilledStack()
         {
             // Assign
-            Stack stack = new Stack();
+            Stack<int> stack = new Stack<int>();
             // Act
             stack.Push(1);
             bool result = stack.IsEmpty();

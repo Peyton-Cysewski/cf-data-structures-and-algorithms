@@ -66,6 +66,7 @@ A queue is a data structure that works with FIFO/LILO ordering. A queue is like 
 ---
 
 ## Change Log
-1.1: *Initial Release* - 20 July 2020  
+1.2: *Converted everything to Generics* - 21 July 2020
+1.1: *Initial Release* - 20 July 2020
 
 ---

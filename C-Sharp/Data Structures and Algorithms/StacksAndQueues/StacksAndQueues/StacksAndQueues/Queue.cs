@@ -3,19 +3,23 @@ using System.Text;
 
 namespace StacksAndQueues
 {
-    public class Queue
+    public class Queue<Type>
     {
-        public Node Front { get; set; }
-        public Node Rear { get; set; }
+        public Node<Type> Front { get; set; }
+        public Node<Type> Rear { get; set; }
 
         public Queue()
         {
             Rear = Front;
         }
 
-        public void Enqueue(int value)
+        /// <summary>
+        /// Addes a Node to the Rear of the queue
+        /// </summary>
+        /// <param name="value">The value of the added Node</param>
+        public void Enqueue(Type value)
         {
-            Node temp = new Node(value);
+            Node<Type> temp = new Node<Type>(value);
             if (Rear == null)
             {
                 Front = temp;
@@ -28,30 +32,42 @@ namespace StacksAndQueues
             }
         }
 
-        public int Dequeue()
+        /// <summary>
+        /// Removes a Node from the Front of the queue
+        /// </summary>
+        /// <returns>Value of the removed Node</returns>
+        public Type Dequeue()
         {
             if (Front == null)
                 throw new NullReferenceException();
             else if (Front.Next == null)
             {
-                int temp = Front.Value;
+                Type temp = Front.Value;
                 Front = null;
                 Rear = Front;
                 return temp;
             }
             else
             {
-                int temp = Front.Value;
+                Type temp = Front.Value;
                 Front = Front.Next;
                 return temp;
             }
         }
 
-        public int Peek()
+        /// <summary>
+        /// Looks at the value of the Front Node
+        /// </summary>
+        /// <returns>Value of the Front Node</returns>
+        public Type Peek()
         {
             return Front.Value;
         }
 
+        /// <summary>
+        /// Checks whether or not a queue is empty
+        /// </summary>
+        /// <returns>True if empty, False if not empty</returns>
         public bool IsEmpty()
         {
             if (Front == null) return true;

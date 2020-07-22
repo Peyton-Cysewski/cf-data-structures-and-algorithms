@@ -10,7 +10,7 @@ namespace StacksAndQueuesTests
         public void EnqueueWorks()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             queue.Enqueue(4);
             int expected = 4;
@@ -23,7 +23,7 @@ namespace StacksAndQueuesTests
         public void EnqueueWorksWithMultipleItems()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             queue.Enqueue(4);
             queue.Enqueue(6);
@@ -41,7 +41,7 @@ namespace StacksAndQueuesTests
         public void DequeueWorks()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             queue.Enqueue(4);
             queue.Enqueue(6);
@@ -56,7 +56,7 @@ namespace StacksAndQueuesTests
         public void PeekWorks()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             queue.Enqueue(4);
             queue.Enqueue(6);
@@ -71,7 +71,7 @@ namespace StacksAndQueuesTests
         public void IsEmptyWorksAndCanInstantiateAnEmptyQueue()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             bool result = queue.IsEmpty();
             // Assert
@@ -82,7 +82,7 @@ namespace StacksAndQueuesTests
         public void ThrowsExceptionWithPeekOnEmptyArray()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             // Assert
             Assert.Throws<NullReferenceException>(() => queue.Peek());
@@ -92,7 +92,7 @@ namespace StacksAndQueuesTests
         public void CanSuccessfullyEmptyAQueueAfterMultipleDequeues()
         {
             // Assign
-            Queue queue = new Queue();
+            Queue<int> queue = new Queue<int>();
             // Act
             queue.Enqueue(4);
             queue.Enqueue(6);

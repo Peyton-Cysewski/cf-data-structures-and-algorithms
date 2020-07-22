@@ -4,30 +4,30 @@ using System.Text;
 
 namespace StacksAndQueues
 {
-    public class Stack
+    public class Stack<Type>
     {
-        public Node Top { get; set; }
+        public Node<Type> Top { get; set; }
 
         /// <summary>
         /// Takes in a value then adds a new Node with that value to the top of the stack.
         /// </summary>
         /// <param name="value">Value stored in Node.</param>
-        public void Push(int value)
+        public void Push(Type value)
         {
-            Node temp = new Node(value);
+            Node<Type> temp = new Node<Type>(value);
             temp.Next = Top;
             Top = temp;
         }
 
         /// <summary>
-        /// Removes the Top value off of the stack and returns it value.
+        /// Removes the Top node off of the stack and returns its Value.
         /// </summary>
-        /// <returns>Value of top Node of the stack that is removed.</returns>
-        public int Pop()
+        /// <returns>Value of the Top Node of the stack that is removed.</returns>
+        public Type Pop()
         {
             if (Top == null)
                 throw new NullReferenceException();
-            int temp = Top.Value;
+            Type temp = Top.Value;
             Top = Top.Next;
             return temp;
         }
@@ -36,7 +36,7 @@ namespace StacksAndQueues
         /// Looks to the Top of the stack and returns its value.
         /// </summary>
         /// <returns>Value of the Top of the stack.</returns>
-        public int Peek()
+        public Type Peek()
         {
             if (Top == null)
                 throw new NullReferenceException();
