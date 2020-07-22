@@ -2,12 +2,12 @@
 
 namespace StacksAndQueues
 {
-    public class Node
+    public class Node<Type>
     {
-        public int Value { get; set; }
-        public Node Next { get; set; }
+        public Type Value { get; set; }
+        public Node<Type> Next { get; set; }
 
-        public Node(int value)
+        public Node(Type value)
         {
             Value = value;
         }
