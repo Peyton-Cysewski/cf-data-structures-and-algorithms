@@ -7,3 +7,4 @@ This directory holds all of my code challenges that are done in C#.
 - [Zipped Linked List](./LinkedListZip)
 - [Queue With Stacks](./QueueWithStacks)
 - [FIFO Animal Shelter](./FIFOAnimalShelter)
+- [Multi-Bracket Validation](./MultiBracketValidation)
