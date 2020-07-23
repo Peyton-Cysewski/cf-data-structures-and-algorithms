@@ -24,6 +24,11 @@ namespace MultiBracketValidation
             }
         }
 
+        /// <summary>
+        /// Takes in a string and determines if it has a balanced number of all bracket types.
+        /// </summary>
+        /// <param name="input">String to be analyzed.</param>
+        /// <returns>True if balanced, False if unbalanced.</returns>
         public static bool ValidateMultiBrackets(string input)
         {
             try
