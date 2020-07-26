@@ -5,3 +5,4 @@ This directory holds all my data structures and algorithms that have been implem
 ## Table of Contents
 - [Singly Linked List](./LinkedList)
 - [Stacks and Queues](./StacksAndQueues)
+- [Trees](./Trees)
