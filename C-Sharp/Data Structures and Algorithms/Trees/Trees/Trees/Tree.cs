@@ -113,6 +113,10 @@ namespace Trees
 
         // FindMaximumValue
         #region
+        /// <summary>
+        /// Finds the maximum value in a tree. Only works with integers
+        /// </summary>
+        /// <returns>Maximum value</returns>
         public int FindMaximumValue()
         {
             if (typeof(T) == typeof(int))
