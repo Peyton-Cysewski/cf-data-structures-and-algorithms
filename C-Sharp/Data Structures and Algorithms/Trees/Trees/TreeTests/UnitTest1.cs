@@ -161,5 +161,32 @@ namespace TreeTests
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void CanSearchBinarySearchTree()
+        {
+            // Assign
+            BinarySearchTree bst = new BinarySearchTree();
+            Node<int> root = new Node<int>(4);
+            Node<int> left = new Node<int>(2);
+            Node<int> right = new Node<int>(6);
+            Node<int> leftLeft = new Node<int>(1);
+            Node<int> leftRight = new Node<int>(3);
+            Node<int> rightLeft = new Node<int>(5);
+            Node<int> rightRight = new Node<int>(7);
+            left.LeftChild = leftLeft;
+            left.RightChild = leftRight;
+            right.LeftChild = rightLeft;
+            right.RightChild = rightRight;
+            root.LeftChild = left;
+            root.RightChild = right;
+            bst.Root = root;
+            // Act
+            bool result = bst.Contains(6);
+            bool falseResult = bst.Contains(8);
+            // Assert
+            Assert.True(result);
+            Assert.False(falseResult);
+        }
     }
 }
