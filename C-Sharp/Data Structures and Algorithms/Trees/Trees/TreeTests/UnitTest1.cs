@@ -132,6 +132,32 @@ namespace TreeTests
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void FindMaximumValueWorks()
+        {
+            // Assign
+            Tree<int> tree = new Tree<int>();
+            Node<int> root = new Node<int>(10);
+            Node<int> left = new Node<int>(21);
+            Node<int> right = new Node<int>(13);
+            Node<int> leftLeft = new Node<int>(4);
+            Node<int> leftRight = new Node<int>(55);
+            Node<int> rightLeft = new Node<int>(61);
+            Node<int> rightRight = new Node<int>(37);
+            left.LeftChild = leftLeft;
+            left.RightChild = leftRight;
+            right.LeftChild = rightLeft;
+            right.RightChild = rightRight;
+            root.LeftChild = left;
+            root.RightChild = right;
+            tree.Root = root;
+            // Act
+            int expected = 61;
+            int actual = tree.FindMaximumValue();
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
     }
     public class BinarySearchTrees
     {

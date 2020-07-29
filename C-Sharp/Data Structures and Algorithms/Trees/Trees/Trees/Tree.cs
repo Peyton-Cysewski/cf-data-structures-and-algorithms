@@ -12,7 +12,7 @@ namespace Trees
             Node<T> node = new Node<T>(value);
             Root = node;
         }
-        /// PreOrder
+        // PreOrder
         #region
         /// <summary>
         /// Returns an array of the values contained in the tree ordered by the recursive pattern: root, right child, left child
@@ -45,7 +45,7 @@ namespace Trees
         }
         #endregion
 
-        /// InOrder
+        // InOrder
         #region
         /// <summary>
         /// Returns an array of the values contained in the tree ordered by the recursive pattern: right child, root, left child
@@ -78,7 +78,7 @@ namespace Trees
         }
         #endregion
 
-        /// PostOrder
+        // PostOrder
         #region
         /// <summary>
         /// Returns an array of the values contained in the tree ordered by the recursive pattern: right child, left child, root
@@ -108,6 +108,31 @@ namespace Trees
                 PostOrder(list, node.RightChild);
             }
             list.Add(node.Value);
+        }
+        #endregion
+
+        // FindMaximumValue
+        #region
+        public int FindMaximumValue()
+        {
+            if (typeof(T) == typeof(int))
+            {
+                var values = PreOrder(Root);
+                int max = Convert.ToInt32(values[0]);
+                foreach (var val in values)
+                {
+                    int num = Convert.ToInt32(val);
+                    if (num > max)
+                    {
+                        max = num;
+                    }
+                }
+                return max;
+            }
+            else
+            {
+                throw new Exception("Method only works with trees of type int");
+            }
         }
         #endregion
     }
