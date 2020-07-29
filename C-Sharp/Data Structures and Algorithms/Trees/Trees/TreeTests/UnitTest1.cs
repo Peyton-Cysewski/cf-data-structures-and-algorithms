@@ -46,7 +46,7 @@ namespace TreeTests
             int leftExpected = 2;
             int leftActual = tree.Root.LeftChild.Value;
             int rightExpected = 3;
-            int rightActual = tree.Root.LeftChild.Value;
+            int rightActual = tree.Root.RightChild.Value;
             // Assert
             Assert.Equal(leftExpected, leftActual);
             Assert.Equal(rightExpected, rightActual);
@@ -76,6 +76,88 @@ namespace TreeTests
             // Act
             int[] expected = new int[] { 1, 2, 4, 5, 3, 6, 7 };
             int[] actual = tree.PreOrder(tree.Root);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void InOrderWorks()
+        {
+            // Assign
+            Tree<int> tree = new Tree<int>();
+            Node<int> root = new Node<int>(1);
+            Node<int> left = new Node<int>(2);
+            Node<int> right = new Node<int>(3);
+            Node<int> leftLeft = new Node<int>(4);
+            Node<int> leftRight = new Node<int>(5);
+            Node<int> rightLeft = new Node<int>(6);
+            Node<int> rightRight = new Node<int>(7);
+            left.LeftChild = leftLeft;
+            left.RightChild = leftRight;
+            right.LeftChild = rightLeft;
+            right.RightChild = rightRight;
+            root.LeftChild = left;
+            root.RightChild = right;
+            tree.Root = root;
+            // Act
+            int[] expected = new int[] { 4, 2, 5, 1, 6, 3, 7 };
+            int[] actual = tree.InOrder(tree.Root);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void PostOrderWorks()
+        {
+            // Assign
+            Tree<int> tree = new Tree<int>();
+            Node<int> root = new Node<int>(1);
+            Node<int> left = new Node<int>(2);
+            Node<int> right = new Node<int>(3);
+            Node<int> leftLeft = new Node<int>(4);
+            Node<int> leftRight = new Node<int>(5);
+            Node<int> rightLeft = new Node<int>(6);
+            Node<int> rightRight = new Node<int>(7);
+            left.LeftChild = leftLeft;
+            left.RightChild = leftRight;
+            right.LeftChild = rightLeft;
+            right.RightChild = rightRight;
+            root.LeftChild = left;
+            root.RightChild = right;
+            tree.Root = root;
+            // Act
+            int[] expected = new int[] { 4, 5, 2, 6, 7, 3, 1 };
+            int[] actual = tree.PostOrder(tree.Root);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+    }
+    public class BinarySearchTrees
+    {
+        [Fact]
+        public void CanAddToBinarySearchTree()
+        {
+            // Assign
+            BinarySearchTree bst = new BinarySearchTree();
+            Node<int> root = new Node<int>(4);
+            Node<int> left = new Node<int>(2);
+            Node<int> right = new Node<int>(6);
+            Node<int> leftLeft = new Node<int>(1);
+            Node<int> leftRight = new Node<int>(3);
+            Node<int> rightLeft = new Node<int>(5);
+            Node<int> rightRight = new Node<int>(7);
+            left.LeftChild = leftLeft;
+            left.RightChild = leftRight;
+            right.LeftChild = rightLeft;
+            right.RightChild = rightRight;
+            root.LeftChild = left;
+            root.RightChild = right;
+            bst.Root = root;
+            // Act
+            bst.Add(5);
+            int expected = 5;
+            int actual = bst.Root.RightChild.LeftChild.LeftChild.Value;
             // Assert
             Assert.Equal(expected, actual);
         }
