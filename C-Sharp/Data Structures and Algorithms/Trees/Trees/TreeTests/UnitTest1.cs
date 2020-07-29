@@ -137,13 +137,13 @@ namespace TreeTests
         {
             // Assign
             Tree<int> tree = new Tree<int>();
-            Node<int> root = new Node<int>(1);
-            Node<int> left = new Node<int>(2);
-            Node<int> right = new Node<int>(3);
+            Node<int> root = new Node<int>(10);
+            Node<int> left = new Node<int>(21);
+            Node<int> right = new Node<int>(13);
             Node<int> leftLeft = new Node<int>(4);
-            Node<int> leftRight = new Node<int>(5);
-            Node<int> rightLeft = new Node<int>(6);
-            Node<int> rightRight = new Node<int>(7);
+            Node<int> leftRight = new Node<int>(55);
+            Node<int> rightLeft = new Node<int>(61);
+            Node<int> rightRight = new Node<int>(37);
             left.LeftChild = leftLeft;
             left.RightChild = leftRight;
             right.LeftChild = rightLeft;
@@ -152,7 +152,7 @@ namespace TreeTests
             root.RightChild = right;
             tree.Root = root;
             // Act
-            int expected = 7;
+            int expected = 61;
             int actual = tree.FindMaximumValue();
             // Assert
             Assert.Equal(expected, actual);
