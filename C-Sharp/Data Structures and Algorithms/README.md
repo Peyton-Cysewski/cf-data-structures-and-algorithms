@@ -6,3 +6,4 @@ This directory holds all my data structures and algorithms that have been implem
 - [Singly Linked List](./LinkedList)
 - [Stacks and Queues](./StacksAndQueues)
 - [Trees](./Trees)
+- [Insertion Sort](./InsertionSort)
