@@ -4,6 +4,10 @@ namespace InsertionSort
 {
     public class ArrayInsertionSort
     {
+        /// <summary>
+        /// Takes in an array and sorts it according to the insertion sort algorithm.
+        /// </summary>
+        /// <param name="array">Array to be sorted.</param>
         public void Sort(int[] array)
         {
             for (int i = 1; i < array.Length; i++)

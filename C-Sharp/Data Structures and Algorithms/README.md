@@ -7,3 +7,4 @@ This directory holds all my data structures and algorithms that have been implem
 - [Stacks and Queues](./StacksAndQueues)
 - [Trees](./Trees)
 - [Insertion Sort](./InsertionSort)
+- [Merge Sort](./MergeSort)
