@@ -5,7 +5,7 @@
 ---
 
 ## Description
-Insertion sort is a sorting algorithm that compares a value to its leftward neighbor and moves it left if it is smaller. It repeats this process until the value can no longer move to the left. The algorithm then repeats those steps with the next number in the list until it too cannot move to the left. Once the algorithm has iterated thorugh the entire list, then it will be sorted.
+Insertion sort is a sorting algorithm that compares a value to its leftward neighbor and moves it left if it is smaller. It repeats this process until the value can no longer move to the left. The algorithm then repeats those steps with the next number in the list until it too cannot move to the left. Once the algorithm has iterated thorugh the entire list, then it will be sorted. 
 
 ---
 
