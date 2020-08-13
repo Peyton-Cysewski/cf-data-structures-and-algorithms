@@ -8,3 +8,4 @@ This directory holds all my data structures and algorithms that have been implem
 - [Trees](./Trees)
 - [Insertion Sort](./InsertionSort)
 - [Merge Sort](./MergeSort)
+- [Quick Sort](./QuickSort)

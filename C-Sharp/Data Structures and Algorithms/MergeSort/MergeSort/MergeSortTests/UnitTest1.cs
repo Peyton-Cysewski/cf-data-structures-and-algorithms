@@ -33,12 +33,36 @@ namespace MergeSortTests
         public void MergeSortWorksWithInvertedArray()
         {
             // Assign
-            int[] array = { 6,5,4,3,2,1 };
+            int[] array = { 6, 5, 4, 3, 2, 1 };
             // Act
             Sort(array);
-            int[] expected = { 1,2,3,4,5,6 };
+            int[] expected = { 1, 2, 3, 4, 5, 6 };
             // Assert
             Assert.Equal(expected, array);
+        }
+
+        [Fact]
+        public void MergeSortWorksWithRepeatValues()
+        {
+            // Assign
+            int[] array = { 1, 2, 3, 2, 1, 1 };
+            // Act
+            Sort(array);
+            int[] expected = { 1, 1, 1, 2, 2, 3 };
+            // Assert
+            Assert.Equal(expected, array);
+        }
+
+        [Fact]
+        public void MergeSortReferncesTheSameArray()
+        {
+            // Assign
+            int[] array = { 8, 4, 23, 42, 16, 15 };
+            var reference = array;
+            // Act
+            Sort(array);
+            // Assert
+            Assert.Same(reference,array);
         }
     }
 }
