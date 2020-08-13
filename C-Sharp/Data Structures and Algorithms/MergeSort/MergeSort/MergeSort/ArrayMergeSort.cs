@@ -10,15 +10,18 @@ namespace MergeSort
         /// <param name="array">Array to be sorted.</param>
         public static void Sort(int[] array)
         {
-            int n = array.Length;
-            if (n > 1)
+            if (array != null)
             {
-                int mid = n / 2;
-                int[] left = array[..mid];
-                int[] right = array[mid..];
-                Sort(left);
-                Sort(right);
-                Merge(left, right, array);
+                int n = array.Length;
+                if (n > 1)
+                {
+                    int mid = n / 2;
+                    int[] left = array[..mid];
+                    int[] right = array[mid..];
+                    Sort(left);
+                    Sort(right);
+                    Merge(left, right, array);
+                }
             }
         }
         /// <summary>
