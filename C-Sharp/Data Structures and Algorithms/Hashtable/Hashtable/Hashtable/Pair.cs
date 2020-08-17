@@ -4,7 +4,14 @@ using System.Text;
 
 namespace HashtableLibrary
 {
-    class Pair
+    public class Pair<T>
     {
+        public string Key { get; set; }
+        public T Value { get; set; }
+        public Pair(string key, T value)
+        {
+            Key = key;
+            Value = value;
+        }
     }
 }
