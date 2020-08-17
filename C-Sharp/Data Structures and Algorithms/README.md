@@ -9,3 +9,4 @@ This directory holds all my data structures and algorithms that have been implem
 - [Insertion Sort](./InsertionSort)
 - [Merge Sort](./MergeSort)
 - [Quick Sort](./QuickSort)
+- [Hashtable](./Hashtable)
