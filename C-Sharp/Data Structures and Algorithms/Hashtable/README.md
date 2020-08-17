@@ -4,40 +4,42 @@
 
 ---
 
-### Description
-***[Problem Domain for the Code Challenge]***
+## Challenge
+Create an implementation of a hashtable using either my own linked lists or the built-in ones.
 
-Given an array. Return "Yes" if the sequence is considered a perfect sequence. Otherwise, return "No"
+---
+
+## Approach & Efficiency
+I ended up using the built-in linked lists becasue they have nodes that allowed for generic types. Inside of those nodes I housed my key/value pairs in a data type I made up called 'Pair' that contains properties called 'key' and 'value'. The overall design is elementary as it is just a large array that houses a new linked list at each index. If there are any collisions from the hash, then it will attach a node containing a 'Pair' object to the end of the linked list at that index.
+
+---
+
+## API
+- `Add`: Takes a key and a value and adds it to the hashtable.
+- `Get`: Takes in a target key and returns the assocaited value.
+- `Contains`: Checks whether or not the targeted key exists in the hashtable.
+- `Hash`: A private method that converts a key (as a string) to a specific index value of the underlying hashtable array.
 
 ---
 
 ### Inputs and Expected Outputs
 
-| Input | Expected Output |
-| :----------- | :----------- |
-| [1,3,2] | Yes |
-| [2,99,100] | No |
+| State | Input | Expected Output |
+| :----------- | :----------- | :--------- |
+| `hashtable.Add("Key", 10)` | `hashtable.Get("Key")` | `10` |
+| `hashtable.Add("Key", 10)` | `hashtable.Contains("Key")` | `True` |
+| `hashtable.Add("Key", 10)` | `hashtable.Contains("Different Key")` | `False` |
 
 
 ---
 
 ### Big O
 
-
 | Time | Space |
 | :----------- | :----------- |
-| O(n) | O(n) |
-
-
----
-
-
-### Whiteboard Visual
-***[Your Whiteboard Image]***
-![Image 1](https://via.placeholder.com/750x500)
-
+| O(1) | O(n) |
 
 ---
 
 ### Change Log
-1.0: *Initial Release* - 16 August 2020
+1.0: *Initial Release* - 17 August 2020
