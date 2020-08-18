@@ -8,4 +8,4 @@ This directory holds all of my code challenges that are done in C#.
 - [Queue With Stacks](./QueueWithStacks)
 - [FIFO Animal Shelter](./FIFOAnimalShelter)
 - [Multi-Bracket Validation](./MultiBracketValidation)
-- [Repeated WOrd](./RepeatedWord)
+- [Repeated Word](./RepeatedWord)
