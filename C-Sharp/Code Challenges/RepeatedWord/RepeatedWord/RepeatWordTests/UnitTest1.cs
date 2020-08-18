@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using RepeatedWord;
+using static RepeatedWord.RepeatWords;
 
 namespace RepeatWordTests
 {
@@ -17,8 +17,37 @@ namespace RepeatWordTests
             string expected2 = "it";
             string expected3 = "summer";
             // Act
-            string actual1 = 
+            string actual1 = CheckRepeat(test1);
+            string actual2 = CheckRepeat(test2);
+            string actual3 = CheckRepeat(test3);
             // Assert
+            Assert.Equal(expected1, actual1);
+            Assert.Equal(expected2, actual2);
+            Assert.Equal(expected3, actual3);
+        }
+
+        [Fact]
+        public void CheckRepeatsWorksWithNoRepeats()
+        {
+            // Assign
+            string test1 = "This sentence has no repeats at all.";
+            string expected1 = "no repeats";
+            // Act
+            string actual1 = CheckRepeat(test1);
+            // Assert
+            Assert.Equal(expected1, actual1);
+        }
+
+        [Fact]
+        public void CheckRepeatsWorksWithEmptyStrings()
+        {
+            // Assign
+            string test1 = "";
+            string expected1 = "no repeats";
+            // Act
+            string actual1 = CheckRepeat(test1);
+            // Assert
+            Assert.Equal(expected1, actual1);
         }
     }
 }
