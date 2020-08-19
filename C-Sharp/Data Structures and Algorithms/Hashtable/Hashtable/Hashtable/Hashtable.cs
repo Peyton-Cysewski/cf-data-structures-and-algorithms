@@ -5,6 +5,7 @@ namespace HashtableLibrary
 {
     public class Hashtable<T>
     {
+
         public LinkedList<LinkedListNode<Pair<T>>>[] Map { get; set; }
         public Hashtable(int size)
         {
