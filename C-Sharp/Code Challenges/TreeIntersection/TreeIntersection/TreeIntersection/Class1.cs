@@ -15,24 +15,27 @@ namespace TreeIntersectionChallenge
         /// <returns>List of shared values.</returns>
         public static List<int> FindIntersections(Tree<int> tree1, Tree<int> tree2)
         {
-            HashSet<int> hashset = new HashSet<int>();
             List<int> intersections = new List<int>();
-            List<int> treeList1 = Traverse(tree1.Root);
-            foreach (int num in treeList1)
+            if (tree1.Root != null && tree2.Root != null)
             {
-                if (!hashset.Contains(num))
+                HashSet<int> hashset = new HashSet<int>();
+                List<int> treeList1 = Traverse(tree1.Root);
+                foreach (int num in treeList1)
                 {
-                    hashset.Add(num);
-                }
-            }
-            List<int> treeList2 = Traverse(tree2.Root);
-            foreach (int num in treeList2)
-            {
-                if (hashset.Contains(num))
-                {
-                    if (!intersections.Contains(num))
+                    if (!hashset.Contains(num))
                     {
-                        intersections.Add(num);
+                        hashset.Add(num);
+                    }
+                }
+                List<int> treeList2 = Traverse(tree2.Root);
+                foreach (int num in treeList2)
+                {
+                    if (hashset.Contains(num))
+                    {
+                        if (!intersections.Contains(num))
+                        {
+                            intersections.Add(num);
+                        }
                     }
                 }
             }
