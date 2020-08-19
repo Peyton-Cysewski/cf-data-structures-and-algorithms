@@ -9,3 +9,4 @@ This directory holds all of my code challenges that are done in C#.
 - [FIFO Animal Shelter](./FIFOAnimalShelter)
 - [Multi-Bracket Validation](./MultiBracketValidation)
 - [Repeated Word](./RepeatedWord)
+- [Tree Intersection](./TreeIntersection)
