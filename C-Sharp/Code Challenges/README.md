@@ -10,3 +10,4 @@ This directory holds all of my code challenges that are done in C#.
 - [Multi-Bracket Validation](./MultiBracketValidation)
 - [Repeated Word](./RepeatedWord)
 - [Tree Intersection](./TreeIntersection)
+- [Left Join](./LeftJoin)
