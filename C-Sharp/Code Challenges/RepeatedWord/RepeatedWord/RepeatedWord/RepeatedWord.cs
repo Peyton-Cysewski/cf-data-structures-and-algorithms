@@ -5,6 +5,11 @@ namespace RepeatedWord
 {
     public class RepeatWords
     {
+        /// <summary>
+        /// Takes a string and finds the first word to be repeated.
+        /// </summary>
+        /// <param name="language">A string containing space or punctuation separated words.</param>
+        /// <returns>First repeated word.</returns>
         public static string CheckRepeat(string language)
         {
             string[] words = language.Split(',', ' ', '-', '.');
