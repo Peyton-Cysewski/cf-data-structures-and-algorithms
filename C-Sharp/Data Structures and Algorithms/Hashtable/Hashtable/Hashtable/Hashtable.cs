@@ -5,7 +5,6 @@ namespace HashtableLibrary
 {
     public class Hashtable<T>
     {
-
         private LinkedList<LinkedListNode<Pair<T>>>[] Map { get; set; }
         public Hashtable(int size)
         {
@@ -74,14 +73,17 @@ namespace HashtableLibrary
         public bool Contains(string key)
         {
             int index = Hash(key, Map.Length);
-            var current = Map[index].First;
-            while (current != null)
+            if (Map[index] != null)
             {
-                if (current.Value.Value.Key == key)
+                var current = Map[index].First;
+                while (current != null)
                 {
-                    return true;
+                    if (current.Value.Value.Key == key)
+                    {
+                        return true;
+                    }
+                    current = current.Next;
                 }
-                current = current.Next;
             }
             return false;
         }
