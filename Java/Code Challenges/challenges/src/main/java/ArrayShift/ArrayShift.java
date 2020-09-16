@@ -1,3 +1,5 @@
+package ArrayShift;
+
 public class ArrayShift {
     public static int[] insertShiftArray (int[] input, int value) {
         if (input.length == 0){
