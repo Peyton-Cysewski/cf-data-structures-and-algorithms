@@ -27,3 +27,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+//tasks.withType(Test) {
+//    useJUnitPlatform()
+//    jvmArgs '--enable-preview'
+//}
