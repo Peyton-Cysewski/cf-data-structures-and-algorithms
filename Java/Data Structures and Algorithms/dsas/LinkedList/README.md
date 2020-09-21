@@ -20,28 +20,17 @@ A Java implementation of a `Singly Linked List`. Singly Linked Lists contain ind
 
 ---
 
-## Visuals
-***[Add screenshots of your methods in action]***
+## Methods
 
-### Insert Method
-***[In your own words explain what this method is doing]***
-*The Insert Method takes in an int as a parameter. A new Node is then created using the* 
-*int param as its Value. The new Node is then placed in the Linked List at the Head and*
-*the previous Head is assigned as the new Nodes Next.*
-![Image 1](https://via.placeholder.com/750x500)
-### Includes Method
-***[In your own words explain what this method is doing]***
-*The Includes Method takes in an int as a parameter then iterates through the Nodes of the*
-*Linked List checking all the Values. If the value is found True is returned, if not then*
-*False is returned.*
-![Image 1](https://via.placeholder.com/750x500)
-### toString Method
-***[In your own words explain what this method is doing]***
-*The Print Method displays a well formatted depiction of the current state of the*
-*Linked List by iterating over all Nodes.*
-![Image 1](https://via.placeholder.com/750x500)
+### Insert
+The insert method takes in an appropriate value and places it at the front of the linked list. This means that if there are any current values already in the list, then they will effectively be pushed back and index.
 
+### Includes
+The includes method checks to see if the targeted value exists in the list. It looks through each node of the list and returns true if it finds a match. If not, then it returns false.
+
+### toString
+The toString method iterates through the linked list and returns a stringified list of all the values including null. The output format looks like this: `"{1} -> {2} -> {3} -> null"`.
 ---
 
 ## Change Log
-1.0: *Initial Release* - 18 Sept 2020  
+1.0: *Initial Release* - 20 Sept 2020  
