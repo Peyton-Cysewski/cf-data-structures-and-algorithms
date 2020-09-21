@@ -3,3 +3,4 @@
 This directory holds all my data structures and algorithms that have been implemented in Java.
 
 ## Table of Contents
+- [Linked List](./dsas/LinkedList)
