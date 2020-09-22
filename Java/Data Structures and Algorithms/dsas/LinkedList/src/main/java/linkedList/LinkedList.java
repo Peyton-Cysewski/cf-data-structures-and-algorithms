@@ -5,11 +5,14 @@ package linkedList;
 
 public class LinkedList<T> {
     public Node<T> head = null;
+    private Node<T> tail = null;
 
     public void insert(T value) {
         Node node = new Node(value);
         if (this.head != null)
             node.next = this.head;
+        else
+            this.tail = node;
         this.head = node;
     }
 
@@ -35,5 +38,49 @@ public class LinkedList<T> {
         }
         sb.append("null");
         return sb.toString();
+    }
+
+    public void append(T value) {
+        Node<T> node = new Node(value);
+        if (this.head == null)
+            this.insert(value);
+        else {
+            this.tail.next = node;
+            this.tail = node;
+        }
+    }
+
+    public void insertBefore(T value, T newValue) {
+        try {
+            if (this.head.value == value)
+                this.insert(newValue);
+            else {
+                Node<T> node = new Node(newValue);
+                Node<T> curr = this.head.next;
+                Node<T> prev = this.head;
+                while (curr.value != value) {
+                    prev = curr;
+                    curr = curr.next;
+                }
+                node.next = curr;
+                prev.next = node;
+            }
+        } catch (Exception e) {
+            System.out.println("The target value was not found and new value could not be properly inserted.");
+        }
+    }
+
+    public void insertAfter(T value, T newValue) {
+        try {
+            Node<T> curr = this.head;
+            while (curr.value != value) {
+                curr = curr.next;
+            }
+            Node<T> node = new Node(newValue);
+            node.next = curr.next;
+            curr.next = node;
+        } catch (Exception e) {
+            System.out.println("The target value was not found and new value could not be properly inserted.");
+        }
     }
 }

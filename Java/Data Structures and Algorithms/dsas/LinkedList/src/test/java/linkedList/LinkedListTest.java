@@ -61,4 +61,65 @@ public class LinkedListTest {
         String expected = "{3} -> {100} -> {42} -> null";
         assertEquals(expected, ll.toString());
     }
+
+    @Test public void testAppend() {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        ll.append(87);
+        String expected = "{3} -> {100} -> {42} -> {87} -> null";
+        assertEquals(expected, ll.toString());
+    }
+
+    @Test public void testAppendMultiple() {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        ll.append(87);
+        ll.append(89);
+        String expected = "{3} -> {100} -> {42} -> {87} -> {89} -> null";
+        assertEquals(expected, ll.toString());
+    }
+
+    @Test public void testInsertBefore() {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        ll.insertBefore(100, 16);
+        String expected = "{3} -> {16} -> {100} -> {42} -> null";
+        assertEquals(expected, ll.toString());
+    }
+
+    @Test public void testInsertBeforeStart() {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        ll.insertBefore(3, 45);
+        String expected = "{45} -> {3} -> {100} -> {42} -> null";
+        assertEquals(expected, ll.toString());
+    }
+
+    @Test public void testInsertAfter() {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        ll.insertAfter(100, 77);
+        String expected = "{3} -> {100} -> {77} -> {42} -> null";
+        assertEquals(expected, ll.toString());
+    }
+
+    @Test public void testInsertAfterEnd() {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        ll.insertAfter(42, 1);
+        String expected = "{3} -> {100} -> {42} -> {1} -> null";
+        assertEquals(expected, ll.toString());
+    }
 }
