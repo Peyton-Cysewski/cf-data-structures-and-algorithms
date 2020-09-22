@@ -122,4 +122,23 @@ public class LinkedListTest {
         String expected = "{3} -> {100} -> {42} -> {1} -> null";
         assertEquals(expected, ll.toString());
     }
+
+    @Test public void testKthFromEnd() throws Exception {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.insert(42);
+        ll.insert(100);
+        ll.insert(3);
+        // 3 -> 100 -> 42
+        int actual1 = ll.kthFromEnd(1);
+        int negative = ll.kthFromEnd(-3);
+        int equalLength = ll.kthFromEnd(2);
+        assertEquals(100, actual1);
+        assertEquals(42, negative);
+        assertEquals(3, equalLength);
+
+        LinkedList<Integer> ll2 = new LinkedList<>();
+        ll2.insert(4);
+        int actual2 = ll2.kthFromEnd(0);
+        assertEquals(4, actual2);
+    }
 }
