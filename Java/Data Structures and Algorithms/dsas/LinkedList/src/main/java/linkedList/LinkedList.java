@@ -84,8 +84,7 @@ public class LinkedList<T> {
         }
     }
 
-    public static LinkedList zipLists(LinkedList list1, LinkedList list2)
-    {
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2) {
         try {
             Node newHead = (list1.head != null) ? list1.head : list2.head;
 
@@ -115,6 +114,7 @@ public class LinkedList<T> {
             System.out.println(e.getMessage());
             return null;
         }
+    }
       
     public T kthFromEnd(int k) throws Exception {
         Node<T> current = this.head;
