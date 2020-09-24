@@ -115,5 +115,30 @@ public class LinkedList<T> {
             System.out.println(e.getMessage());
             return null;
         }
+      
+    public T kthFromEnd(int k) throws Exception {
+        Node<T> current = this.head;
+        Node<T> slower = this.head;
+        int counter = 0;
+        if (k < 0) {
+            int temp = 0;
+            while (current != null) {
+                temp++;
+                current = current.next;
+            }
+            current = this.head;
+            k = temp + k;
+        }
+        while (current != null) {
+            if (counter > k){
+                slower = slower.next;
+            }
+            current = current.next;
+            counter ++;
+        }
+        if (counter < k) {
+            throw new Exception("It looks like the linked list is too short!");
+        }
+        return slower.value;
     }
 }

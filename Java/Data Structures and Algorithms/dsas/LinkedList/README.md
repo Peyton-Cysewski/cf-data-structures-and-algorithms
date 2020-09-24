@@ -5,7 +5,9 @@
 ---
 
 ## Description
-A Java implementation of a `Singly Linked List`. Singly Linked Lists contain individual nodes that have a reference to the `Next` node in the list as well as a `Value`. The methods of this `Linked List` are `insert`, `includes`, `append`, `insertBefore`, `insertAfter`, `zipLists` and `toString`. This Linked List is also a generic linked list, meaning that it can hold any data type that is specified upon instantiation.
+
+A Java implementation of a `Singly Linked List`. Singly Linked Lists contain individual nodes that have a reference to the `Next` node in the list as well as a `Value`. The methods of this `Linked List` are `insert`, `includes`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`, `zipLists` and `toString`. This Linked List is also a generic linked list, meaning that it can hold any data type that is specified upon instantiation.
+
 
 ---
 
@@ -18,6 +20,7 @@ A Java implementation of a `Singly Linked List`. Singly Linked Lists contain ind
 | append | Adds a new `Node` to the `Linked List` to the end | O(1) | O(1) | myList.append(100) |
 | insertBefore | Adds a new `Node` to the `Linked List` before a targeted value | O(n) | O(1) | myList.insertBefore(99) |
 | insertAfter | Adds a new `Node` to the `Linked List` after a targeted value | O(n) | O(1) | myList.insertAfter100() |
+| kthFromEnd | Returns a `Node` from the `Linked List` that is k nodes from the end | O(n) | O(1) | myList.kthFromEnd(3) |
 | toString | Prints the `Linked List` to the console | O(n) | O(1) | myList.Print() |
 | zipLists | Interlaces two `Linked List` objects together | O(n) | O(1) | LinkedList.zipLists(list1, list2) |
 
@@ -41,6 +44,9 @@ The insertBefore method takes in a target value and a new value to add to the li
 ### insertAfter
 The insertBefore method takes in a target value and a new value to add to the list. If the target value is found in the list, then the new value will be added directly after it.
 
+### KthFromEnd
+The kthFromEnd method takes in an integer and returns the value of the node that is 
+
 ### toString
 The toString method iterates through the linked list and returns a stringified list of all the values including null. The output format looks like this: `"{1} -> {2} -> {3} -> null"`.
 
@@ -50,6 +56,7 @@ The zipLists method is a static method. It takes in two lists and interlaces the
 ---
 
 ## Change Log
-1.2: *Added zipLists Method* - 23 Sept 2020
+1.3: *Added zipLists Method* - 23 Sept 2020
+1.2: *Added KthFromEnd Method* - 22 Sept 2020
 1.1: *Added More Insertion Methods* - 21 Sept 2020
 1.0: *Initial Release* - 20 Sept 2020
