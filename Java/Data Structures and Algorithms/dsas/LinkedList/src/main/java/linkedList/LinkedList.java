@@ -84,6 +84,38 @@ public class LinkedList<T> {
         }
     }
 
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2)
+    {
+        try {
+            Node newHead = (list1.head != null) ? list1.head : list2.head;
+
+            if (list1.head != null && list2.head != null) {
+                if (list1.head.value.getClass() != list2.head.value.getClass())
+                    throw new Exception("The input LinkedLists were not of the same type");
+
+                Node current1 = list1.head;
+                Node current2 = list2.head;
+                Node temp1 = current1.next;
+                Node temp2 = current2.next;
+                while (current1 != null && current2 != null) {
+                    current1.next = current2;
+                    if (temp1 == null && temp2 != null) break;
+                    current2.next = temp1;
+                    if (temp2 == null) break;
+                    current1 = temp1;
+                    current2 = temp2;
+                    temp1 = temp1.next;
+                    temp2 = temp2.next;
+                }
+            }
+            LinkedList newList = new LinkedList();
+            newList.head = newHead;
+            return newList;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+      
     public T kthFromEnd(int k) throws Exception {
         Node<T> current = this.head;
         Node<T> slower = this.head;
