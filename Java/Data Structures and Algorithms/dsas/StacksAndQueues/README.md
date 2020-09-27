@@ -13,23 +13,57 @@ A Java implementation of a `Stack` and `Queue`. Stacks and Queues both contain i
 
 ## Methods
 
+### Stack
 | Method | Summary | Big O Time | Big O Space | Example | 
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
-| insert | Adds a new `Node` to the `Linked List` at the front | O(1) | O(1) | myList.Insert(99) |
-| includes | Takes in a value and returns a boolean depending on if the value is in the `LinkedList` | O(n) | O(1) | myList.Includes(99) |
-| append | Adds a new `Node` to the `Linked List` to the end | O(1) | O(1) | myList.append(100) |
-| insertBefore | Adds a new `Node` to the `Linked List` before a targeted value | O(n) | O(1) | myList.insertBefore(99) |
-| insertAfter | Adds a new `Node` to the `Linked List` after a targeted value | O(n) | O(1) | myList.insertAfter100() |
-| kthFromEnd | Returns a `Node` from the `Linked List` that is k nodes from the end | O(n) | O(1) | myList.kthFromEnd(3) |
-| toString | Prints the `Linked List` to the console | O(n) | O(1) | myList.Print() |
-| zipLists | Interlaces two `Linked List` objects together | O(n) | O(1) | LinkedList.zipLists(list1, list2) |
+| push | Adds a new value to the Stack | O(1) | O(1) | myStack.push(99) |
+| pop | Returns and removes the Stack's top value | O(1) | O(1) | myStack.pop() |
+| peek | Returns the Stack's top value | O(1) | O(1) | myStack.peek() |
+| isEmpty | Indicates whether the Stack is empty or not | O(1) | O(1) | myStack.isEmpty() |
 
+### Queue
+| Method | Summary | Big O Time | Big O Space | Example | 
+| :----------- | :----------- | :-------------: | :-------------: | :----------- |
+| enqueue | Adds a new value to the Queue | O(1) | O(1) | myStack.enqueue(99) |
+| dequeue | Returns and removes the Queue's front value | O(1) | O(1) | myStack.dequeue() |
+| peek | Returns the Queue's front value | O(1) | O(1) | myStack.peek() |
+| isEmpty | Indicates whether the Queue is empty or not | O(1) | O(1) | myStack.isEmpty() |
 
 ---
 
-## Stack Methods
+## Stack Properties and Methods
 
-## Queue Methodsit 
+### top
+The value that is on the top of the stack.
+
+### push
+Adds a new value to the top of the stack.
+
+### pop
+Returns the value on the top of the stack after it is removed from the stack
+
+### peek
+Returns the value at the top of the stack.
+
+### isEmpty
+Returns a boolean depending on whether the stack has items in it or not.
+
+## Queue Properties and Methods
+
+### front
+The value that is at the front of queue.
+
+### enqueue
+Adds a value to the rear of the queue.
+
+### dequeue
+Returns the value at the front of the queue after it is removed from the queue.
+
+### peek
+Returns that value at the front of the queue.
+
+### isEmpty
+Returns a boolean depending on whether or not the queue has items in it or not.
 
 ---
 
