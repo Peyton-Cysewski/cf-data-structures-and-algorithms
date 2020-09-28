@@ -4,3 +4,4 @@ This directory holds all my data structures and algorithms that have been implem
 
 ## Table of Contents
 - [Linked List](./dsas/LinkedList)
+- [Stacks and Queues](./dsas/StacksAndQueues)
