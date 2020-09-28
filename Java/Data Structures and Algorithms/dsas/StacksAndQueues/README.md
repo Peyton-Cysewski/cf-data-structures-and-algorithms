@@ -31,10 +31,7 @@ A Java implementation of a `Stack` and `Queue`. Stacks and Queues both contain i
 
 ---
 
-## Stack Properties and Methods
-
-### top
-The value that is on the top of the stack.
+## Stack Methods
 
 ### push
 Adds a new value to the top of the stack.
@@ -48,10 +45,7 @@ Returns the value at the top of the stack.
 ### isEmpty
 Returns a boolean depending on whether the stack has items in it or not.
 
-## Queue Properties and Methods
-
-### front
-The value that is at the front of queue.
+## Queue Methods
 
 ### enqueue
 Adds a value to the rear of the queue.
