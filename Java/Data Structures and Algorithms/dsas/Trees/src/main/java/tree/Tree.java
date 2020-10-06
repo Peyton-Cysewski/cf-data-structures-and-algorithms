@@ -3,74 +3,94 @@ package tree;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tree<T>
-{
-    public Node<T> root;
+public class Tree {
+    public Node root;
     public Tree() { }
-    public Tree(T value)
-    {
-        Node<T> node = new Node<T>(value);
+    public Tree(int value) {
+        Node node = new Node(value);
         root = node;
     }
 
-    public T[] PreOrder(Node<T> root)
-    {
-        List<T> list = new ArrayList<>();
+    public Node getRoot() { return root; }
+    public void setRoot(Node root) { this.root = root; }
+
+    public Object[] PreOrder(Node root) {
+        List<Integer> list = new ArrayList<>();
         PreOrder(list, root);
-        return (T[])list.toArray();
+        return list.toArray();
     }
 
-    private void PreOrder(List<T> list, Node<T> node)
-    {
-        list.Add(node.Value);
-        if (node.LeftChild != null)
-        {
-            PreOrder(list, node.LeftChild);
-        }
-        if (node.RightChild != null)
-        {
-            PreOrder(list, node.RightChild);
-        }
+    public Object[] PreOrder() {
+        Node root = this.root;
+        List<Integer> list = new ArrayList<>();
+        PreOrder(list, root);
+        return list.toArray();
     }
 
-    public T[] InOrder(Node<T> root)
-    {
-        List<T> list = new List<T>();
+    private void PreOrder(List<Integer> list, Node node) {
+        list.add(node.value);
+        if (node.leftChild != null)
+            PreOrder(list, node.leftChild);
+        if (node.rightChild != null)
+            PreOrder(list, node.rightChild);
+    }
+
+    public Object[] InOrder(Node root) {
+        List<Integer> list = new ArrayList<>();
         InOrder(list, root);
-        return list.ToArray();
+        return list.toArray();
     }
 
-    private void InOrder(List<T> list, Node<T> node)
-    {
-        if (node.LeftChild != null)
-        {
-            InOrder(list, node.LeftChild);
-        }
-        list.Add(node.Value);
-        if (node.RightChild != null)
-        {
-            InOrder(list, node.RightChild);
-        }
+    public Object[] InOrder() {
+        Node root = this.root;
+        List<Integer> list = new ArrayList<>();
+        InOrder(list, root);
+        return list.toArray();
     }
 
-    public T[] PostOrder(Node<T> root)
-    {
-        List<T> list = new List<T>();
+    private void InOrder(List<Integer> list, Node node) {
+        if (node.leftChild != null)
+            InOrder(list, node.leftChild);
+        list.add(node.value);
+        if (node.rightChild != null)
+            InOrder(list, node.rightChild);
+    }
+
+    public Object[] PostOrder(Node root) {
+        List<Integer> list = new ArrayList<>();
         PostOrder(list, root);
-        return list.ToArray();
+        return list.toArray();
     }
 
-    private void PostOrder(List<T> list, Node<T> node)
-    {
-        if (node.LeftChild != null)
-        {
-            PostOrder(list, node.LeftChild);
+    public Object[] PostOrder() {
+        Node root = this.root;
+        List<Integer> list = new ArrayList<>();
+        PostOrder(list, root);
+        return list.toArray();
+    }
+
+    private void PostOrder(List<Integer> list, Node node) {
+        if (node.leftChild != null)
+            PostOrder(list, node.leftChild);
+        if (node.rightChild != null)
+            PostOrder(list, node.rightChild);
+        list.add(node.value);
+    }
+
+    public int findMax() {
+        if (root == null) throw new NullPointerException();
+        return findMax(this.root, this.root.value);
+    }
+
+    private int findMax(Node node, int max) {
+        if (node.value > max) {
+            max = node.value;
+        if (node.leftChild != null)
+            max = findMax(node.leftChild, max);
+        if (node.rightChild != null)
+            max = findMax(node.rightChild, max);
         }
-        if (node.RightChild != null)
-        {
-            PostOrder(list, node.RightChild);
-        }
-        list.Add(node.Value);
+        return max;
     }
 
 }
