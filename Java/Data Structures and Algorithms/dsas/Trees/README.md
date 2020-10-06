@@ -13,9 +13,10 @@ Trees are data structures that have a sort of branching structure (hence the nam
 
 | Method | Summary | Big O Time | Big O Space |
 | :----------- | :----------- | :-------------: | :-------------: |
-| PreOrder | Traverses through a tree odered by: Root, Left, Right | O(n) | O(1) |
-| InOrder | Traverses through a tree odered by: Left, Root, Right | O(n) | O(1) |
-| PostOrder | Traverses through a tree odered by: Left, Right, Root | O(n) | O(1) |
+| PreOrder | Traverses through a tree odered by: Root, Left, Right | O(n) | O(n) |
+| InOrder | Traverses through a tree odered by: Left, Root, Right | O(n) | O(n) |
+| PostOrder | Traverses through a tree odered by: Left, Right, Root | O(n) | O(n) |
+| BreadthFirst | Traverses through a tree odered by level aka distance from root nod | O(n) | O(n) |
 | FindMaximumValue | Traverses through a tree and returns the maximum value | O(n) | O(1) |
 | Add | Traverses through a binary search tree and inserts a new value in the correct spot | O(logn) | O(1) |
 | Contains | Traverses through a binary search tree and looks to see if a value exists at least one time | O(logn) | O(1) |
@@ -29,6 +30,8 @@ The PreOrder method of traversing through a tree looks at the root first before 
 The InOrder method of traversing through a tree looks at the root's left child first before proceeding on to the root itself and then finally its right child. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.
 ### PostOrder Method
 The PostOrder method of traversing through a tree looks at the root's left child first before proceeding on to the root's left child and then finally the root itself. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.
+### BreathFirst Method
+The BreadthFirst method traverses the entire tree by going level by level. It fundamentally uses a queue structure to make sure that the left and right children nodes are stored before moving to each subsequent level.
 ### FindMaximumValue Method
 Conveniently, since any of the above methods return an array with all of the values, to determine the highest value all that needs to be done is to loop through the array it returns and check for the highest value. Internally its time and space complexities are determined by any of the above methods, which share the same complexities: O(n) and O(1).
 
