@@ -6,6 +6,9 @@ import java.util.List;
 public class Tree {
     public Node root;
     public Tree() { }
+    public Tree(Node node) {
+        this.root = node;
+    }
     public Tree(int value) {
         Node node = new Node(value);
         root = node;
@@ -83,13 +86,12 @@ public class Tree {
     }
 
     private int findMax(Node node, int max) {
-        if (node.value > max) {
+        if (node.value > max)
             max = node.value;
         if (node.leftChild != null)
             max = findMax(node.leftChild, max);
         if (node.rightChild != null)
             max = findMax(node.rightChild, max);
-        }
         return max;
     }
 
