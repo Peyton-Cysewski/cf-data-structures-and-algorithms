@@ -7,8 +7,31 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TreeTest {
-    @Test public void testSomeLibraryMethod() {
-        Tree classUnderTest = new Tree();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+
+    private Tree makeATree() {
+        Node one = new Node(1);
+        Node two = new Node(2);
+        Node three = new Node(3);
+        Node four = new Node(4);
+        Node five = new Node(5);
+        Node six = new Node(6);
+        Node seven = new Node(7);
+        two.leftChild = one;
+        two.rightChild = three;
+        six.leftChild = five;
+        six.rightChild = seven;
+        four.leftChild = two;
+        four.rightChild = six;
+        return new Tree(four);
+    }
+
+    @Test public void testFindMaxValue() {
+        Tree tree = makeATree();
+        assertEquals("The max value should be 7", 7, tree.findMax());
+    }
+
+    @Test public void testThrowsException() {
+        Tree tree = new Tree();
+        assertThrows(NullPointerException.class, () -> tree.findMax());
     }
 }
