@@ -34,4 +34,9 @@ public class TreeTest {
         Tree tree = new Tree();
         assertThrows(NullPointerException.class, () -> tree.findMax());
     }
+
+    @Test public void testBreadthFirstTraversal() throws Exception {
+        Tree tree = makeATree();
+        assertArrayEquals("The array produced reflects a breadth first traversal.", new Integer[]{4,2,6,1,3,5,7}, tree.breadthTraversal());
+    }
 }

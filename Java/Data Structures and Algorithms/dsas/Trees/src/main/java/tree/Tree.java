@@ -1,7 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Tree {
     public Node root;
@@ -95,4 +94,21 @@ public class Tree {
         return max;
     }
 
+    public Integer[] breadthTraversal() throws Exception {
+        if (this.root == null) throw new Exception();
+        ArrayDeque<Node> q = new ArrayDeque<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        q.add(this.root);
+        while (!q.isEmpty()) {
+            Node current = q.removeFirst();
+            list.add(current.value);
+            if (current.leftChild != null)
+                q.add(current.leftChild);
+            if (current.rightChild != null)
+                q.add(current.rightChild);
+        }
+        Integer[] arr = new Integer[list.size()];
+        arr = list.toArray(arr);
+        return arr;
+    }
 }
