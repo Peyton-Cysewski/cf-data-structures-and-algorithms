@@ -51,10 +51,18 @@ public class KaryTreeTest {
         return tree;
     }
 
-    @Test public void testKaryTree() {
+    @Test public void testKaryTreeTraversal() {
         KaryTree<Integer> tree = makeTree();
         String expected = "root -> 1 -> 2 -> 5 -> 6 -> 7 -> 3 -> 8 -> 9 -> 10 -> 4 -> 11 -> 12 -> 13 -> 14 -> 15";
         String actual = tree.preOrder();
         assertEquals("String shows a proper traversal of a kary tree", expected, actual);
+    }
+
+    @Test public void testKaryTreeFizzBuzz() throws Exception {
+        KaryTree<Integer> original = makeTree();
+        KaryTree<String> fizzBuzzed = original.fizzBuzzTree();
+        String expected = "root -> 1 -> 2 -> Buzz -> Fizz -> 7 -> Fizz -> 8 -> Fizz -> Buzz -> 4 -> 11 -> Fizz -> 13 -> 14 -> FizzBuzz";
+        String actual = fizzBuzzed.preOrder();
+        assertEquals("Properly converted from integers to strings with FizzBuzz changes", expected, actual);
     }
 }

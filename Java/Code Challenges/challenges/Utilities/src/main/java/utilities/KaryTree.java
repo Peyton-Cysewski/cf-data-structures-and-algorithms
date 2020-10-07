@@ -10,7 +10,6 @@ public class KaryTree<T> {
     public KaryTree<String> fizzBuzzTree() throws Exception {
         if (root.getValue().getClass() != Integer.class) throw new Exception("FizzBuzz can only be performed on a Integer tree");
         KaryTree<String> resultTree = new KaryTree<>(new KaryNode<>(fizzBuzz(this.root)));
-        Stack<KaryNode> stack = new Stack<>();
         fizzBuzzTree(this.root, resultTree.root);
         return resultTree;
     }
@@ -25,9 +24,9 @@ public class KaryTree<T> {
 
     private String fizzBuzz(KaryNode<T> node) {
         Integer num = (Integer) node.getValue();
-        if (num % 3 == 0) return "Fizz";
+        if (num % 15 == 0) return "FizzBuzz";
+        else if (num % 3 == 0) return "Fizz";
         else if (num % 5 == 0) return "Buzz";
-        else if (num % 15 == 0) return "FizzBuzz";
         return num.toString();
     }
 
