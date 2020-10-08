@@ -12,7 +12,8 @@ First create a k-ary tree that can hold integers. Next, create a method that tak
 
 ## Classes and Methods
 
-### [KaryNode<T>](../java/utilities/KaryNode.java)
+### [KaryNode<T>](../../java/utilities/KaryNode.java)
+challenges/Utilities/src/main/java/utilities/KaryTree.java
 This class is required for a k-ary tree. Because each node can have any arbitrary number of children nodes, it needs a data structure that can do this, so I added an ArrayList to hold hold the children. Children can be added to the array list, but not removed from it since that functionality is not currently needed. This class is generic.
 
 ### KaryTree<T>
