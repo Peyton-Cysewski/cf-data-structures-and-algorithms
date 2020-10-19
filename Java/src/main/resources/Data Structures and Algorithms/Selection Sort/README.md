@@ -1,6 +1,6 @@
 # Selection Sort
 
-View the code [Here](../../../dsas/selectionsort/SelectionSort.java)
+View the code [Here](../dsas/selectionsort/SelectionSort.java)
 
 
 ## Explanation
