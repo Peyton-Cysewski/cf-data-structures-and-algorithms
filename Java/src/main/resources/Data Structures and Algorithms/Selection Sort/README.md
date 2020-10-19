@@ -12,5 +12,5 @@ then it will be sorted. Below is a diagram of how this algorithm works, stepped 
 ## Additional Notes
 This code base has two variations of the algorithm. The second method called `sort2` works the same way the diagram shows. The first 
 method called `sort1` works slightly differently. Instead of looking to the right of the index to find the smallest remaining value, this 
-algorithm looks to the left of the index and grabs the first value that is large than the index. This method ensures that as the index 
-moves through the array, every value to the left of the current index is gauranteed to be sorted.
+algorithm looks to the left of the index and grabs the first value that is larger than the index. This method ensures that as the index 
+moves through the array, every value to the left of the current index is guaranteed to be sorted.
