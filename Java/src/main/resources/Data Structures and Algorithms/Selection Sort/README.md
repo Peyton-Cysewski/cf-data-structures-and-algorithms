@@ -1,6 +1,6 @@
 # Selection Sort
 
-View the code [Here](../../java/dsas/selectionsort/SelectionSort.java)
+View the code [Here](../../.../java/dsas/selectionsort/SelectionSort.java)
 
 ## Explanation
 Selection sort is a sorting algorithm that increments one index at a time, finding the smallest (or largest) 
