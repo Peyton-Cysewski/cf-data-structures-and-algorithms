@@ -1,5 +1,8 @@
 # Merge Sort
 
+View the code [Here](../../../java/dsas/mergesort/MergeSort.java)
+
+## Explanation
 The merge sort algorithm is recursive in nature. This is important to know right away because it drives the behavior and Big O of the algorithm. If merge sort is applied to an array of numbers, it starts by dividing the array in half to smaller and smaller numbers. In cases of odd numbered lengths then the left side of the array will be one larger than the right side. This pattern recursively breaks down the array into its individual components. Drawing this out would resemble a binary tree. Each of these components is then put back together in the correct order, comparing items from left to right, adding them in order from smallest to largest back into the array of the next size up until the whole thing is recompiled together, fully sorted. At any point where two smaller arrays are being put back together if one array reaches its end first, then the remaining items are imediately put into the array since they would already be sorted from the iteration before. The diagrams below highlight this process of indirect recursion.
 
 ### Array Division

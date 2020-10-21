@@ -5,9 +5,9 @@ This directory holds all my data structures and algorithms that have been implem
 ## Table of Contents
 
 ### Data Structures
-- [Linked List](~~~)
-- [Stacks and Queues](~~~)
-- [Trees](~~~)
+- [Linked List](./Linked%20List)
+- [Stacks and Queues](./Stacks%20and%20Queues)
+- [Trees](./Trees)
 
 ### Algorithms
 - [Selection Sort](./Selection%20Sort)
