@@ -5,8 +5,8 @@ This repo is meant to both document and showcase all of the the various code cha
 ## Table of Contents
 
 ### Java
-- [Code Challenges](./Java/Code%20Challenges)
-- [Data Structures and Algorithms](./Java/Data%20Structures%20and%20Algorithms)
+- [Code Challenges](./Java/src/main/resources/Code%20Challenges)
+- [Data Structures and Algorithms](./Java/src/main/resources/Data%20Structures%20and%20Algorithms)
 
 ### C#
 - [Code Challenges](./C-Sharp/Code%20Challenges)
