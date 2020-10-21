@@ -11,3 +11,4 @@ This directory holds all my data structures and algorithms that have been implem
 
 ### Algorithms
 - [Selection Sort](./Selection%20Sort)
+- [merge Sort](./Merge%20Sort)
