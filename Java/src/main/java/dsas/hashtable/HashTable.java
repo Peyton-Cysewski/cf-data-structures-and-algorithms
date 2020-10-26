@@ -2,41 +2,56 @@ package dsas.hashtable;
 
 import java.util.ArrayList;
 
-public class HashTable<K, V> {
-    private ArrayList<Integer> Bucket;
+public class HashTable<V> {
+    private ArrayList<Pair<V>>[] bucket;
 
     /**
-     * NOTE: This implementation of a hashtable can use only strings or ints as keys. Any objects work for the value.
+     * NOTE: This implementation of a hashtable can uses Strings as keys. Any objects work for the value.
      * @param size The size of the internal data structure for holding key, values pairs.
      */
     public HashTable(int size) {
-        Bucket = new ArrayList<>(size);
+        bucket = new ArrayList[size];
     }
 
-    public void add(K key, V value) {
-
-    }
-
-    // Hash algorithm Driver method
-    private int hash(K key) throws Exception {
-        int hash = 0;
-        String _class = key.getClass().getSimpleName();
-        switch (_class) {
-            case "String":
-                hash = hashString((String) key);
-                break;
-            case "Integer":
-//                hash = hashInteger((Integer) key);
-                break;
-            default:
-                throw new Exception("Key type not supported");
+    public void add(String key, V value) {
+        int index = hash(key);
+        Pair<V> pair = new Pair<>(key, value);
+        if (bucket[index] == null) {
+            bucket[index] = new ArrayList<>();
         }
-        return hash;
+        bucket[index].add(pair);
     }
 
-    // string hashing method
-    private int hashString(String key) {
-        int hash;
-        return 0;
+    public V get(String key) {
+        int index = hash(key);
+        if (bucket[index] != null) {
+            for (Pair pair : bucket[index]) {
+                if (pair.getKey().equals(key)) {
+                    return (V)pair.getValue();
+                }
+            }
+        }
+        return null;
+    }
+
+    public boolean contains(String key) {
+        int index = hash(key);
+        if (bucket[index] != null) {
+            for (Pair pair : bucket[index]) {
+                if (pair.getKey().equals(key)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private int hash(String key) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++) {
+            hash += (key.charAt(i) * (i + 1));
+        }
+        hash = (hash * 4999) % bucket.length;
+        return hash;
     }
 }
