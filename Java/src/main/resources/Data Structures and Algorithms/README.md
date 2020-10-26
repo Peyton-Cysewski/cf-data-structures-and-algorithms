@@ -8,6 +8,7 @@ This directory holds all my data structures and algorithms that have been implem
 - [Linked List](./Linked%20List)
 - [Stacks and Queues](./Stacks%20and%20Queues)
 - [Trees](./Trees)
+- [Hashtable](./Hashtable)
 
 ### Algorithms
 - [Selection Sort](./Selection%20Sort)
