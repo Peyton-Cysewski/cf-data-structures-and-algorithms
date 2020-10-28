@@ -9,3 +9,4 @@ This directory holds all of my code challenges that are done in Java.
 - [FIFO Animal Shelter](./Utilities/FIFO%20Animal%20Shelter)
 - [FizzBuzz Tree](./Utilities/FizzBuzz%20Tree)
 - [Repeated Word](./Repeated%20Word)
+- [Tree Intersection](./Tree%20Intersection)
