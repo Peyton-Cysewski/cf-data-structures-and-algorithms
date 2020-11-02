@@ -18,15 +18,27 @@ public class Graph {
         if (!nodes.contains(host) || !nodes.contains(neighbor))
             throw new Exception("One or both of the nodes does not exist in the graph.");
         GraphEdge edge = new GraphEdge(weight, neighbor);
+        if (host.edges == null)
+            host.edges = new ArrayList<>();
         host.edges.add(edge);
     }
 
     public GraphNode[] getNodes() {
-        return (GraphNode[]) nodes.toArray();
+        GraphNode[] arr = new GraphNode[nodes.size()];
+        int i = 0;
+        for (GraphNode node : nodes) {
+            arr[i++] = node;
+        }
+        return arr;
     }
 
     public GraphEdge[] getNeighbors(GraphNode node) {
-        return (GraphEdge[]) node.edges.toArray();
+        GraphEdge[] arr = new GraphEdge[node.edges.size()];
+        int i = 0;
+        for (GraphEdge edge : node.edges) {
+            arr[i++] = edge;
+        }
+        return arr;
     }
 
     public int size() {
