@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Graph {
-    private HashSet<GraphNode> nodes = new HashSet<>();
+    public HashSet<GraphNode> nodes = new HashSet<>();
 
     public Graph() {}
 

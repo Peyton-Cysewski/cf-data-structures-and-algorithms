@@ -11,3 +11,4 @@ This directory holds all of my code challenges that are done in Java.
 - [Repeated Word](./Repeated%20Word)
 - [Tree Intersection](./Tree%20Intersection)
 - [Breadth First Graph](./Breadth%20First%20Graph)
+- [Graph Get Edges](./Get%20Edges)
