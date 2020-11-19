@@ -41,5 +41,11 @@ I ended up using the built-in linked lists because they have nodes that allowed 
 
 ---
 
+#### Whiteboard
+![Whiteboard](./assets/hashtablewhiteboard.png)
+
+---
+
 ### Change Log
+1.1: *Added Whiteboard* - 19 November 2020
 1.0: *Initial Release* - 25 October 2020
