@@ -40,5 +40,11 @@ The dequeue method removes and returns an animal from the shelter. This is a FIF
 
 ---
 
+### Whiteboard Visual
+![Whiteboard Solution](./assets/whiteboard.png)
+
+---
+
 ### Change Log
+1.1: *Added Visual* - 19 November 2020
 1.0: *Initial Submission* - 29 September 2020  

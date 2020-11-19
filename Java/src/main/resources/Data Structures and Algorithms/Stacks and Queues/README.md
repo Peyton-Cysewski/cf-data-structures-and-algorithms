@@ -33,35 +33,39 @@ A Java implementation of a `Stack` and `Queue`. Stacks and Queues both contain i
 
 ---
 
-## Stack Methods
+## Methods and Visuals
+***Note*** Visuals adapted from a C# implementation that uses similar code and functions in a similar way.
 
-### push
-Adds a new value to the top of the stack.
+### Stack
+#### Push Method
+*The Push Method takes in an int as a parameter. A new Node is then created using the int param as its Value. The new Node is then placed in the Stack at the Top and the previous Top is assigned as the new Node's Next.*
+![Stack Push](./assets/StackPush.png)
+#### Pop Method
+*The Pop Method takes no parameters. The Value of the Top Node is returned. The popped Node's Next becomes the new Top Node.*
+![Stack Pop](./assets/StackPop.png)
+#### Peek Method
+*The Peek Method takes not parameters. It returns the Value of the Top Node.*
+![Stack Peek](./assets/StackPeek.png)
+#### IsEmpty Method
+*The IsEmpty Method takes no parameters. It Returns a boolean depending on whether or not the Top Node is Null.*
+![Stack IsEmpty](./assets/StackIsEmpty.png)
 
-### pop
-Returns the value on the top of the stack after it is removed from the stack
-
-### peek
-Returns the value at the top of the stack.
-
-### isEmpty
-Returns a boolean depending on whether the stack has items in it or not.
-
-## Queue Methods
-
-### enqueue
-Adds a value to the rear of the queue.
-
-### dequeue
-Returns the value at the front of the queue after it is removed from the queue.
-
-### peek
-Returns that value at the front of the queue.
-
-### isEmpty
-Returns a boolean depending on whether or not the queue has items in it or not.
+### Queue
+#### Enqueue Method
+*The Enqueue Method takes in an int as a parameter. A new Node is then created using the int param as its Value. The new Node is then placed in the Stack at the Top and the previous Top is assigned as the new Node's Next.*
+![Queue Enqueue](./assets/QueueEnqueue.png)
+#### Dequeue Method
+*The Dequeue Method takes no parameters. The Value of the Front Node is returned. The dequeued Node's Next becomes the new Front Node.*
+![Queue Dequeue](./assets/QueueDequeue.png)
+#### Peek Method
+*The Peek Method takes not parameters. It returns the Value of the Front Node.*
+![Queue Peek](./assets/QueuePeek.png)
+#### IsEmpty Method
+*The IsEmpty Method takes no parameters. It Returns a boolean depending on whether or not the Front Node is Null.*
+![Queue IsEmpty](./assets/QueueIsEmpty.png)
 
 ---
 
 ## Change Log
+1.1: *Added Visuals* - 19 November 2020
 1.0: *Initial Release* - 27 Sept 2020
