@@ -28,5 +28,11 @@ This method returns a new k-ary string tree. Each node in this tree is in the sa
 
 ---
 
+#### Whiteboard
+![Whiteboard](./assets/fizzbuzztree.png)
+
+---
+
 ### Change Log
+1.1: *Added Whiteboard* - 19 November 2020
 1.0: *Initial Submission* - 7 October 2020  
