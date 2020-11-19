@@ -27,25 +27,31 @@ Trees are data structures that have a sort of branching structure (hence the nam
 
 ## Tree
 ### PreOrder Method
-The PreOrder method of traversing through a tree looks at the root first before proceeding on to the root's left child and its right child. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.
+![PreOrder Diagram](./assets/preorder.png)
+*The PreOrder method of traversing through a tree looks at the root first before proceeding on to the root's left child and its right child. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.*
 ### InOrder Method
-The InOrder method of traversing through a tree looks at the root's left child first before proceeding on to the root itself and then finally its right child. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.
+![InOrder Diagram](./assets/inorder.png)
+*The InOrder method of traversing through a tree looks at the root's left child first before proceeding on to the root itself and then finally its right child. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.*
 ### PostOrder Method
-The PostOrder method of traversing through a tree looks at the root's left child first before proceeding on to the root's left child and then finally the root itself. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.
-### BreathFirst Method
-The BreadthFirst method traverses the entire tree by going level by level. It fundamentally uses a queue structure to make sure that the left and right children nodes are stored before moving to each subsequent level.
+![PostOrder Diagram](./assets/postorder.png)
+*The PostOrder method of traversing through a tree looks at the root's left child first before proceeding on to the root's left child and then finally the root itself. The diagram above shows the order in which the nodes will be ordered after traversing the tree with this method.*
 ### FindMaximumValue Method
-Conveniently, since any of the above methods return an array with all of the values, to determine the highest value all that needs to be done is to loop through the array it returns and check for the highest value. Internally its time and space complexities are determined by any of the above methods, which share the same complexities: O(n) and O(1).
-
-<br>
+![FindMaximumValue Diagram](./assets/findmaximumvalue.png)
+*Conveniently, since any of the above methods return an array with all of the values, to determine the highest value all that needs to be done is to loop through the array it returns and check for the highest value. Internally its time and space complexities are determined by any of the above methods, which share the same complexities: O(n) and O(1).*
+### Breadth First Traversal
+![Breadth First Traversal Diagram](./assets/bfs.png)
+*The Breadth first traversal goes row by row across the tree and is ordered in that fashion.*
 
 ## Binary Search Tree
 ### Add
-The binanry search tree add method takes the value being added to the tree and compares it to each node. If it is smaller than the current node then it traverses to the left child node before repeating the same step again. If it is larger than the node's value then it will traverse to the right child. If they are equal and it has not made its way to a leaf, then it will defer to traverse through the left child. Note: in most cases this has a O(logn) time efficiency, but it could be worse and potentially be a O(n).
+![Add Diagram](./assets/add.png)
+*The binanry search tree add method takes the value being added to the tree and compares it to each node. If it is smaller than the current node then it traverses to the left child node before repeating the same step again. If it is larger than the node's value then it will traverse to the right child. If they are equal and it has not made its way to a leaf, then it will defer to traverse through the left child. Note: in most cases this has a O(logn) time efficiency, but it could be worse and potentially be a O(n).*
 ### Contains
-The binary search tree contains method traverses the tree just like the add method, going to the left or right child respective on whether the target value is less than or equal to the current node's value, or greater than it. If it traverses down a path to a leaf before finding a match, then it returns false. If it finds a match along the way, then it returns true.
+![Contains Diagram](./assets/contains.png)
+*The binary search tree contains method traverses the tree just like the add method, going to the left or right child respective on whether the target value is less than or equal to the current node's value, or greater than it. If it traverses down a path to a leaf before finding a match, then it returns false. If it finds a match along the way, then it returns true.*
 
 ---
-
+    
 ## Change Log
+1.1: *Added Visuals* - 19 November 2020
 1.0: *Initial Release* - 6 October 2020
