@@ -57,7 +57,26 @@ The zipLists method is a static method. It takes in two lists and interlaces the
 
 ---
 
+
+### Visuals
+
+#### Append Method
+##### Whiteboard
+![Append](./assets/AppendWhiteboard.png)
+
+#### K'th from the End Method
+##### Whiteboard
+![Append](./assets/kthFromEndWhiteboard.png)
+
+#### Zip Lists Method
+##### Whiteboard
+![Zipped Linked List Whiteboard](./assets/ZippedListWhiteboard.png)
+
+
+---
+
 ## Change Log
+1.4: *Added Visuals* - 19 November 2020
 1.3: *Added zipLists Method* - 23 Sept 2020
 1.2: *Added KthFromEnd Method* - 22 Sept 2020
 1.1: *Added More Insertion Methods* - 21 Sept 2020
