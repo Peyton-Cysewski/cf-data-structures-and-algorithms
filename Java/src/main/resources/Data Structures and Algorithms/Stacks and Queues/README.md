@@ -33,6 +33,16 @@ A Java implementation of a `Stack` and `Queue`. Stacks and Queues both contain i
 
 ---
 
+## Whiteboards
+
+### Stack
+![Stack Whiteboard](./assets/stackwhiteboard.png)
+
+### Queue
+![Queue Whiteboard](./assets/queuewhiteboard.png)
+
+---
+
 ## Methods and Visuals
 ***Note*** Visuals adapted from a C# implementation that uses similar code and functions in a similar way.
 
