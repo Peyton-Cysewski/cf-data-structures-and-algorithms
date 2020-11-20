@@ -25,6 +25,13 @@ Trees are data structures that have a sort of branching structure (hence the nam
 
 ---
 
+## Whiteboards
+
+### Find Max Value
+![Whiteboard](./assets/findmaxvaluewhiteboard.png)
+
+---
+
 ## Tree
 ### PreOrder Method
 ![PreOrder Diagram](./assets/preorder.png)
